@@ -1,0 +1,17 @@
+﻿.mainfont {
+    font-size: 16px;
+    color: #5893B9;
+}
+
+.dopfont {
+    font-size: 12px;
+    color: #5893B9;
+}
+.item {
+    width:20%;
+}
+.main_in_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}

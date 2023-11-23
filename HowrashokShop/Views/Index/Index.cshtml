@@ -1,0 +1,23 @@
+﻿@model IEnumerable<HowrashokShop.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+@{
+    Layout = "_Layout";
+}
+
+<div class="row mt-5 mb-5">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-3 item">
+            @Html.DisplayFor(modelItem => item.Photos.OrderBy(c => c.Id).ToList()[0].byteArrayToImage)
+            <div class="main_in_item">
+                <p class="mainfont">@Html.DisplayFor(modelItem => item.Category.Name)</p>
+                <p class="mainfont">@Html.DisplayFor(modelItem => item.Costs.OrderByDescending(c => c.DateOfSetting).ToList()[0].Size)</p>
+            </div>
+            <p class="dopfont">@Html.DisplayFor(modelItem => item.DescToShort)</p>
+        </div>
+
+    }
+</div>
