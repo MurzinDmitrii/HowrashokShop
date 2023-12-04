@@ -1,0 +1,11 @@
+﻿#category_box {
+    color: #5893B9;
+    height: 2.7rem;
+    border: 2px solid #5893B9; /* рамка */
+    padding: 0.1rem 1.5rem 0.1rem 1rem; /* отступы от текста до рамки */
+    border-radius: 10px; /* скругление полей формы */
+    appearance: none; /* убираем дефолнтные стрелочки */
+    font-family: 'Ubuntu Condensed', sans-serif;
+    margin-left: 4%;
+    background-color: #DEEFFA;
+}

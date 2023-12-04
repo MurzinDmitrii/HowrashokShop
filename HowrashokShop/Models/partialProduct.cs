@@ -1,4 +1,8 @@
-﻿namespace HowrashokShop.Models
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+
+namespace HowrashokShop.Models
 {
     partial class Product
     {

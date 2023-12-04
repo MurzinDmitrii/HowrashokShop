@@ -3,21 +3,40 @@
 @{
     ViewData["Title"] = "Index";
 }
+
 @{
     Layout = "_Layout";
 }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-<div class="row mt-5 mb-5">
-    @foreach (var item in Model)
-    {
-        <div class="col-lg-3 item">
-            @Html.DisplayFor(modelItem => item.Photos.OrderBy(c => c.Id).ToList()[0].byteArrayToImage)
-            <div class="main_in_item">
-                <p class="mainfont">@Html.DisplayFor(modelItem => item.Category.Name)</p>
-                <p class="mainfont">@Html.DisplayFor(modelItem => item.Costs.OrderByDescending(c => c.DateOfSetting).ToList()[0].Size)</p>
+<div>
+    <div class="inline_class search_panel">
+        @Html.DropDownList("category_box", ViewBag.Categories as SelectList)
+        <link rel="stylesheet" href="~/css/SelectMenu.css" />
+        <form>
+            <input type="text" placeholder="Искать здесь...">
+            <button type="submit"></button>
+        </form>
+        <link rel="stylesheet" href="~/css/SearchStyle.css"/>
+        
+    </div>
+    <div class="row mt-2 mb-5 margin_row">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-3 item">
+                <a asp-action="Details" asp-route-id="@item.Id">
+                    <div>
+                        <img src="~/Images/@Html.DisplayFor(modelItem => item.Photos.OrderBy(c => c.Id).ToList()[0].Photopath)" class="img_item" width="100%" />
+                        <div class="main_in_item">
+                            <p class="mainfont">@Html.DisplayFor(modelItem => item.Category.Name)</p>
+                            <p class="mainfont">@Html.DisplayFor(modelItem => item.Costs.OrderByDescending(c => c.DateOfSetting).ToList()[0].Size)</p>
+                        </div>
+                        <p class="dopfont">@Html.DisplayFor(modelItem => item.DescToShort)</p>
+                    </div>
+                </a>
             </div>
-            <p class="dopfont">@Html.DisplayFor(modelItem => item.DescToShort)</p>
-        </div>
-
-    }
+        }
+    </div>
 </div>
+

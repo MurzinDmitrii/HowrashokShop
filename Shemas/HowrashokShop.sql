@@ -44,7 +44,7 @@ go
 Create table [Photo]
 (
 	[ID] Integer Identity NOT NULL,
-	[Photo] Varbinary(max) NOT NULL,
+	[Photopath] nvarchar(200) NOT NULL,
 	[ProductID] Integer NOT NULL,
 Primary Key ([ID])
 ) 

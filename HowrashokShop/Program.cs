@@ -16,6 +16,4 @@ app.UseStaticFiles();
 app.UseStatusCodePages();
 app.UseMvcWithDefaultRoute();
 
-app.MapGet("/Index", () => "");
-
 app.Run();

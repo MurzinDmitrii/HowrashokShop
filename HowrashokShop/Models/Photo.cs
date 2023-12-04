@@ -7,7 +7,7 @@ public partial class Photo
 {
     public int Id { get; set; }
 
-    public byte[] Photo1 { get; set; } = null!;
+    public string Photopath { get; set; } = null!;
 
     public int ProductId { get; set; }
 

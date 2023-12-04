@@ -47,7 +47,6 @@ public partial class HowrashokShopContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        
         modelBuilder.Entity<Admin>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PK__Admin__3214EC27B1AC5270");
@@ -195,18 +194,18 @@ public partial class HowrashokShopContext : DbContext
 
         modelBuilder.Entity<Photo>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Photo__3214EC27C0E6D555");
+            entity.HasKey(e => e.Id).HasName("PK__Photo__3214EC27332A9D2D");
 
             entity.ToTable("Photo");
 
             entity.Property(e => e.Id).HasColumnName("ID");
-            entity.Property(e => e.Photo1).HasColumnName("Photo");
+            entity.Property(e => e.Photopath).HasMaxLength(200);
             entity.Property(e => e.ProductId).HasColumnName("ProductID");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Photos)
                 .HasForeignKey(d => d.ProductId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Photo__ProductID__4D94879B");
+                .HasConstraintName("FK__Photo__ProductID__02FC7413");
         });
 
         modelBuilder.Entity<Product>(entity =>

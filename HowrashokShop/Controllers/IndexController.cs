@@ -22,6 +22,15 @@ namespace HowrashokShop.Controllers
         public async Task<IActionResult> Index()
         {
             var howrashokShopContext = _context.Products.Include(p => p.Category).Include(p => p.Theme).Include(p => p.Costs).Include(p => p.Photos);
+
+            List<Category> categories = new List<Category>();
+            categories.Add(new Category { Name = "Все" });
+            foreach(var item in _context.Categories.ToList())
+            {
+                categories.Add(item);
+            }
+            ViewBag.Categories = new SelectList(categories, "Id", "Name");
+
             return View(await howrashokShopContext.ToListAsync());
         }
 

@@ -3,18 +3,31 @@
 }
 
 .mainfont {
+    font-family: 'Ubuntu Condensed', sans-serif;
     font-size: 16px;
     color: #5893B9;
 }
 
 .dopfont {
+    font-family: 'Ubuntu Condensed', sans-serif;
     font-size: 12px;
     color: #5893B9;
 }
 
 .header_class {
-    background-image: url('Images/shapka-atelye-long.png');
-    height: 20%;
     background-size: cover;
     background-repeat: no-repeat
+}
+.footer, .contacts {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: #5893B9;
+    background-color: #DEEFFA;
+}
+.inline_class {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly
+}
+.maincontent {
+    height: 100%;
 }
