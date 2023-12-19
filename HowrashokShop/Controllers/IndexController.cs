@@ -25,10 +25,7 @@ namespace HowrashokShop.Controllers
 
             List<Category> categories = new List<Category>();
             categories.Add(new Category { Name = "Все" });
-            foreach(var item in _context.Categories.ToList())
-            {
-                categories.Add(item);
-            }
+            categories.AddRange(_context.Categories.ToList());
             ViewBag.Categories = new SelectList(categories, "Id", "Name");
 
             return View(await howrashokShopContext.ToListAsync());
@@ -45,6 +42,8 @@ namespace HowrashokShop.Controllers
             var product = await _context.Products
                 .Include(p => p.Category)
                 .Include(p => p.Theme)
+                .Include(p => p.Costs)
+                .Include(p => p.Photos)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (product == null)
             {

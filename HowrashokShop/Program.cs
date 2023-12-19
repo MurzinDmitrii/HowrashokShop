@@ -16,4 +16,8 @@ app.UseStaticFiles();
 app.UseStatusCodePages();
 app.UseMvcWithDefaultRoute();
 
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Index}/{action=Index}");
+
 app.Run();

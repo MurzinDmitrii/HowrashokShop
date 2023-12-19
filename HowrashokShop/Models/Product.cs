@@ -15,6 +15,8 @@ public partial class Product
 
     public int ThemeId { get; set; }
 
+    public bool? Arhived { get; set; }
+
     public virtual ICollection<Busket> Buskets { get; set; } = new List<Busket>();
 
     public virtual Category Category { get; set; } = null!;

@@ -7,10 +7,11 @@
 @{
     Layout = "_Layout";
 }
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-<div>
+<div class="content">
     <div class="inline_class search_panel">
         @Html.DropDownList("category_box", ViewBag.Categories as SelectList)
         <link rel="stylesheet" href="~/css/SelectMenu.css" />
@@ -24,7 +25,7 @@
     <div class="row mt-2 mb-5 margin_row">
         @foreach (var item in Model)
         {
-            <div class="col-lg-3 item">
+            <div class="col-md-3 item">
                 <a asp-action="Details" asp-route-id="@item.Id">
                     <div>
                         <img src="~/Images/@Html.DisplayFor(modelItem => item.Photos.OrderBy(c => c.Id).ToList()[0].Photopath)" class="img_item" width="100%" />
