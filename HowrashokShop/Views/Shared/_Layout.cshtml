@@ -12,11 +12,11 @@
         <div class="header_class">
             <img src="~/Images/shapka-atelye-long.png" width="100%"/>
             <div class="inline_class">
-                <ul class="menu-main">
-                    <li><a href="" class="current">Главная</a></li>
+                <ul class="menu-main" id="menu">
+                    <li><a asp-action="Index" asp-controller="Index">Главная</a></li>
                     <li><a href="">Скидки</a></li>
                     <li><a href="">Отзывы</a></li>
-                    <li><a href="">Архивные работы</a></li>
+                    <li><a asp-action="Index" asp-controller="Arhive">Архивные работы</a></li>
                     <li><a href="">Профиль</a></li>
                 </ul>
             </div>
@@ -44,5 +44,6 @@
                 </p>
             </div>
         </div>
+        <script src="~/js/menuScript.js"></script>
     </div>
 </body>

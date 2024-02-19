@@ -13,26 +13,19 @@
 
 <div class="content">
     <div class="inline_class search_panel">
-        <div style="margin-left: 4%; width: 7%">
-            @using (Html.BeginForm())
-            {
-                @Html.DropDownList("FilterString", ViewBag.Categories as SelectList, new { id = "category_box", onchange = "this.form.submit();" })
-            }
-        </div>
+        @Html.DropDownList("category_box", ViewBag.Categories as SelectList)
         <link rel="stylesheet" href="~/css/SelectMenu.css" />
-
-        @using (Html.BeginForm())
-        {
-            @Html.TextBox("SearchString", null, new { placeholder = "Искать здесь..." })
+        <form>
+            <input type="text" placeholder="Искать здесь...">
             <button type="submit"></button>
-        }
-        <link rel="stylesheet" href="~/css/SearchStyle.css"/>
-        
+        </form>
+        <link rel="stylesheet" href="~/css/SearchStyle.css" />
+
     </div>
     <div class="row mt-2 mb-5 margin_row">
         @foreach (var item in Model)
         {
-            @if (item.Arhived == false)
+            @if (item.Arhived == true)
             {
                 <div class="col-md-3 item">
                     <a asp-action="Details" asp-route-id="@item.Id">

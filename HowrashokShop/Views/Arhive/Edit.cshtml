@@ -1,24 +1,22 @@
 ﻿@model HowrashokShop.Models.Product
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 
-@{
-    Layout = "_Layout";
-}
-
-<h1>Create</h1>
+<h1>Edit</h1>
 
 <h4>Product</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Create">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <label asp-for="CategoryId" class="control-label"></label>
-                <select asp-for="CategoryId" class ="form-control" asp-items="ViewBag.CategoryId"></select>
+                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
@@ -32,10 +30,16 @@
             </div>
             <div class="form-group">
                 <label asp-for="ThemeId" class="control-label"></label>
-                <select asp-for="ThemeId" class ="form-control" asp-items="ViewBag.ThemeId"></select>
+                <select asp-for="ThemeId" class="form-control" asp-items="ViewBag.ThemeId"></select>
+                <span asp-validation-for="ThemeId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <label asp-for="Arhived" class="control-label"></label>
+                <input asp-for="Arhived" class="form-control" />
+                <span asp-validation-for="Arhived" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>

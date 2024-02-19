@@ -6,50 +6,32 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HowrashokShop.Models;
-using System.Drawing;
-using Microsoft.Data.SqlClient;
 
 namespace HowrashokShop.Controllers
 {
-    public class IndexController : Controller
+    public class ArhiveController : Controller
     {
         private readonly HowrashokShopContext _context;
 
-        public IndexController(HowrashokShopContext context)
+        public ArhiveController(HowrashokShopContext context)
         {
             _context = context;
         }
 
-        // GET: Index
-        public async Task<IActionResult> Index(string searchString, string filterString)
+        // GET: Arhive
+        public async Task<IActionResult> Index()
         {
-            int index = 0;
-
             var howrashokShopContext = _context.Products.Include(p => p.Category).Include(p => p.Theme).Include(p => p.Costs).Include(p => p.Photos);
-            var productsList = await howrashokShopContext.ToListAsync();
 
             List<Category> categories = new List<Category>();
             categories.Add(new Category { Name = "Все" });
             categories.AddRange(_context.Categories.ToList());
+            ViewBag.Categories = new SelectList(categories, "Id", "Name");
 
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                productsList = productsList.Where(s => s.Description.ToLower().Contains(searchString.ToLower())).ToList();
-                index = categories.IndexOf(categories.FirstOrDefault(c => c.Id.ToString() == filterString));
-            }
-
-            ViewBag.Categories = new SelectList(categories, "Id", "Name", index);
-
-
-            if (!String.IsNullOrEmpty(filterString) && filterString != "0")
-            {
-                productsList = productsList.Where(s => s.Category.Id == Convert.ToInt32(filterString)).ToList();
-            }
-
-            return View(productsList);
+            return View(await howrashokShopContext.ToListAsync());
         }
 
-        // GET: Index/Details/5
+        // GET: Arhive/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Products == null)
@@ -60,8 +42,6 @@ namespace HowrashokShop.Controllers
             var product = await _context.Products
                 .Include(p => p.Category)
                 .Include(p => p.Theme)
-                .Include(p => p.Costs)
-                .Include(p => p.Photos)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (product == null)
             {
@@ -71,7 +51,7 @@ namespace HowrashokShop.Controllers
             return View(product);
         }
 
-        // GET: Index/Create
+        // GET: Arhive/Create
         public IActionResult Create()
         {
             ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id");
@@ -79,12 +59,12 @@ namespace HowrashokShop.Controllers
             return View();
         }
 
-        // POST: Index/Create
+        // POST: Arhive/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,CategoryId,Name,Description,ThemeId")] Product product)
+        public async Task<IActionResult> Create([Bind("Id,CategoryId,Name,Description,ThemeId,Arhived")] Product product)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +77,7 @@ namespace HowrashokShop.Controllers
             return View(product);
         }
 
-        // GET: Index/Edit/5
+        // GET: Arhive/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Products == null)
@@ -115,12 +95,12 @@ namespace HowrashokShop.Controllers
             return View(product);
         }
 
-        // POST: Index/Edit/5
+        // POST: Arhive/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,CategoryId,Name,Description,ThemeId")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CategoryId,Name,Description,ThemeId,Arhived")] Product product)
         {
             if (id != product.Id)
             {
@@ -152,7 +132,7 @@ namespace HowrashokShop.Controllers
             return View(product);
         }
 
-        // GET: Index/Delete/5
+        // GET: Arhive/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Products == null)
@@ -172,7 +152,7 @@ namespace HowrashokShop.Controllers
             return View(product);
         }
 
-        // POST: Index/Delete/5
+        // POST: Arhive/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
