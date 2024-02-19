@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 
 **/connectionString.txt
+**/AuthOptions.cs
