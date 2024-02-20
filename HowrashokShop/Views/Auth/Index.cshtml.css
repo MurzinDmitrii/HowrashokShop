@@ -1,0 +1,21 @@
+﻿h1 {
+    text-align: center;
+    color: #5893B9;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+.content {
+    height: 55%;
+    align-items: center;
+    justify-content:center;
+    display: flex;
+}
+.dopcontent {
+    background: #DEEFFA;
+    border: 2px solid #5893B9;
+    border-radius: 10px;
+    align-items: center;
+    width:20%;
+    padding: 5%;
+}
+
+
