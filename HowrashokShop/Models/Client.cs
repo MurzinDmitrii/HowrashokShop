@@ -11,13 +11,15 @@ public partial class Client
 
     public string FirstName { get; set; } = null!;
 
-    public byte[] Email { get; set; } = null!;
+    public string Email { get; set; } = null!;
 
     public DateTime Birthday { get; set; }
 
     public virtual ICollection<Busket> Buskets { get; set; } = new List<Busket>();
 
     public virtual ClientsPassword? ClientsPassword { get; set; }
+
+    public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
 
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 }

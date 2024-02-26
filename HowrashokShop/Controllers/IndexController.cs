@@ -21,29 +21,16 @@ namespace HowrashokShop.Controllers
         }
 
         // GET: Index
-        public async Task<IActionResult> Index(string searchString, string filterString)
+        public async Task<IActionResult> Index(string searchString)
         {
             int index = 0;
 
             var howrashokShopContext = _context.Products.Include(p => p.Category).Include(p => p.Theme).Include(p => p.Costs).Include(p => p.Photos);
             var productsList = await howrashokShopContext.ToListAsync();
 
-            List<Category> categories = new List<Category>();
-            categories.Add(new Category { Name = "Все" });
-            categories.AddRange(_context.Categories.ToList());
-
             if (!String.IsNullOrEmpty(searchString))
             {
                 productsList = productsList.Where(s => s.Description.ToLower().Contains(searchString.ToLower())).ToList();
-                index = categories.IndexOf(categories.FirstOrDefault(c => c.Id.ToString() == filterString));
-            }
-
-            ViewBag.Categories = new SelectList(categories, "Id", "Name", index);
-
-
-            if (!String.IsNullOrEmpty(filterString) && filterString != "0")
-            {
-                productsList = productsList.Where(s => s.Category.Id == Convert.ToInt32(filterString)).ToList();
             }
 
             return View(productsList);

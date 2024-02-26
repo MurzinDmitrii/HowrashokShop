@@ -15,9 +15,9 @@
         @using (Html.BeginForm())
         {
             <div class="form-container">
-                @Html.TextBox("LoginBox", null, new { placeholder = "Логин", @class = "form-input" })
-                @Html.Password("PasswordBox", null, new { placeholder = "Пароль", @class = "form-input" })
-                <button type="submit" class="form-button">Войти</button>
+                @Html.TextBox("LoginBox", null, new { id = "login", placeholder = "Логин", @class = "form-input" })
+                @Html.Password("PasswordBox", null, new { id = "password", placeholder = "Пароль", @class = "form-input" })
+                <button type="submit" id="submitLogin" class="form-button">Войти</button>
             </div>
         }
         @using (Html.BeginForm())
@@ -27,6 +27,7 @@
             </div>
         }
         <link rel="stylesheet" href="~/css/AuthForm.css" />
+        <script src="~/js/auth.js" />
     </div>
 </div>
 

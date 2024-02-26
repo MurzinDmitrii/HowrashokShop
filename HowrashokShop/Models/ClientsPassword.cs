@@ -7,7 +7,7 @@ public partial class ClientsPassword
 {
     public int ClientId { get; set; }
 
-    public byte[] Password { get; set; } = null!;
+    public string Password { get; set; } = null!;
 
     public virtual Client Client { get; set; } = null!;
 }

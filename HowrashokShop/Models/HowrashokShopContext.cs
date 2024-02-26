@@ -27,6 +27,8 @@ public partial class HowrashokShopContext : DbContext
 
     public virtual DbSet<ClientsPassword> ClientsPasswords { get; set; }
 
+    public virtual DbSet<Comment> Comments { get; set; }
+
     public virtual DbSet<Cost> Costs { get; set; }
 
     public virtual DbSet<Discount> Discounts { get; set; }
@@ -43,7 +45,7 @@ public partial class HowrashokShopContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer(File.ReadAllText("connectionString.txt"));
+        => optionsBuilder.UseSqlServer(File.ReadAllText("connectionString.txt")); 
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -79,7 +81,7 @@ public partial class HowrashokShopContext : DbContext
 
         modelBuilder.Entity<Busket>(entity =>
         {
-            entity.HasKey(e => new { e.Id, e.ClientId, e.ProductId }).HasName("PK__Busket__80C70141606C63A7");
+            entity.HasKey(e => new { e.Id, e.ClientId, e.ProductId }).HasName("PK__Busket__80C7014197538F0F");
 
             entity.ToTable("Busket");
 
@@ -92,12 +94,12 @@ public partial class HowrashokShopContext : DbContext
             entity.HasOne(d => d.Client).WithMany(p => p.Buskets)
                 .HasForeignKey(d => d.ClientId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Busket__ClientID__5441852A");
+                .HasConstraintName("FK__Busket__ClientID__282DF8C2");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Buskets)
                 .HasForeignKey(d => d.ProductId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Busket__ProductI__4F7CD00D");
+                .HasConstraintName("FK__Busket__ProductI__245D67DE");
         });
 
         modelBuilder.Entity<Category>(entity =>
@@ -114,30 +116,54 @@ public partial class HowrashokShopContext : DbContext
 
         modelBuilder.Entity<Client>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Client__3214EC27B05530B2");
+            entity.HasKey(e => e.Id).HasName("PK__Client__3214EC272CE7D5AD");
 
             entity.ToTable("Client");
 
             entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.Birthday).HasColumnType("datetime");
+            entity.Property(e => e.Email).HasMaxLength(3500);
             entity.Property(e => e.FirstName).HasMaxLength(50);
             entity.Property(e => e.LastName).HasMaxLength(50);
         });
 
         modelBuilder.Entity<ClientsPassword>(entity =>
         {
-            entity.HasKey(e => e.ClientId).HasName("PK__ClientsP__E67E1A049BFAB52A");
+            entity.HasKey(e => e.ClientId).HasName("PK__ClientsP__E67E1A04E7A53587");
 
             entity.ToTable("ClientsPassword");
 
             entity.Property(e => e.ClientId)
                 .ValueGeneratedNever()
                 .HasColumnName("ClientID");
+            entity.Property(e => e.Password).HasMaxLength(3500);
 
             entity.HasOne(d => d.Client).WithOne(p => p.ClientsPassword)
                 .HasForeignKey<ClientsPassword>(d => d.ClientId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__ClientsPa__Clien__52593CB8");
+                .HasConstraintName("FK__ClientsPa__Clien__2645B050");
+        });
+
+        modelBuilder.Entity<Comment>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Comments__3214EC279D192E3D");
+
+            entity.Property(e => e.Id).HasColumnName("ID");
+            entity.Property(e => e.ClientId).HasColumnName("ClientID");
+            entity.Property(e => e.Comment1)
+                .HasMaxLength(1000)
+                .HasColumnName("Comment");
+            entity.Property(e => e.ProductId).HasColumnName("ProductID");
+
+            entity.HasOne(d => d.Client).WithMany(p => p.Comments)
+                .HasForeignKey(d => d.ClientId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Comments__Client__29221CFB");
+
+            entity.HasOne(d => d.Product).WithMany(p => p.Comments)
+                .HasForeignKey(d => d.ProductId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK__Comments__Produc__25518C17");
         });
 
         modelBuilder.Entity<Cost>(entity =>
@@ -176,7 +202,7 @@ public partial class HowrashokShopContext : DbContext
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => new { e.Id, e.DateOrder }).HasName("PK__Order__F7251F5F03DEE801");
+            entity.HasKey(e => new { e.Id, e.DateOrder }).HasName("PK__Order__F7251F5F585EBDD7");
 
             entity.ToTable("Order");
 
@@ -189,7 +215,7 @@ public partial class HowrashokShopContext : DbContext
             entity.HasOne(d => d.Client).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.ClientId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Order__ClientID__534D60F1");
+                .HasConstraintName("FK__Order__ClientID__2739D489");
         });
 
         modelBuilder.Entity<Photo>(entity =>
@@ -233,7 +259,7 @@ public partial class HowrashokShopContext : DbContext
 
         modelBuilder.Entity<TablePart>(entity =>
         {
-            entity.HasKey(e => new { e.Id, e.OrderId, e.DateOrder, e.ProductId }).HasName("PK__TablePar__3CB5B66650648189");
+            entity.HasKey(e => new { e.Id, e.OrderId, e.DateOrder, e.ProductId }).HasName("PK__TablePar__3CB5B666EA1C18F3");
 
             entity.ToTable("TablePart");
 
@@ -247,12 +273,12 @@ public partial class HowrashokShopContext : DbContext
             entity.HasOne(d => d.Product).WithMany(p => p.TableParts)
                 .HasForeignKey(d => d.ProductId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__TablePart__Produ__4E88ABD4");
+                .HasConstraintName("FK__TablePart__Produ__236943A5");
 
             entity.HasOne(d => d.Order).WithMany(p => p.TableParts)
                 .HasForeignKey(d => new { d.OrderId, d.DateOrder })
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__TablePart__5535A963");
+                .HasConstraintName("FK__TablePart__2A164134");
         });
 
         modelBuilder.Entity<Theme>(entity =>

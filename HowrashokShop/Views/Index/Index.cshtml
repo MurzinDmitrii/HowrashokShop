@@ -13,14 +13,6 @@
 
 <div class="content">
     <div class="inline_class search_panel">
-        <div style="margin-left: 4%; width: 7%">
-            @using (Html.BeginForm())
-            {
-                @Html.DropDownList("FilterString", ViewBag.Categories as SelectList, new { id = "category_box", onchange = "this.form.submit();" })
-            }
-        </div>
-        <link rel="stylesheet" href="~/css/SelectMenu.css" />
-
         @using (Html.BeginForm())
         {
             @Html.TextBox("SearchString", null, new { placeholder = "Искать здесь..." })
