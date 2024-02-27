@@ -2,7 +2,7 @@
     margin: 10%;
 }
 .content {
-    height: 55%;
+    min-height: 70%;
 }
 .margin_class{
     margin-left: 5%;
