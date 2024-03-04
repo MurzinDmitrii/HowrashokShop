@@ -28,6 +28,14 @@ CheckToken();
 document.getElementById("submitLogin").addEventListener("click", async e => {
     e.preventDefault();
     // отправляет запрос и получаем ответ
+    let responseLogin = await fetch(`/api/ReturnHash?str=${document.getElementById("login").value}`, {
+        method: "GET"
+    });
+    let login = await responseLogin.text()
+    let responcePassword = (await fetch(`/api/ReturnHash?str=${document.getElementById("password").value}`, {
+        method: "GET"
+    }));
+    let password = await responcePassword.text()
     const response = await fetch("/login", {
         method: "POST",
         headers: { "Accept": "application/json", "Content-Type": "application/json" },

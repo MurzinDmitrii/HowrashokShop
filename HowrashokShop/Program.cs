@@ -70,7 +70,16 @@ app.MapPost("/login", (LoginClass loginData) =>
 {
     HowrashokShopContext context = new();
     // находим пользователя 
-    Client? person = context.Clients.FirstOrDefault(p => p.Email == loginData.Email && p.ClientsPassword.Password == loginData.Password);
+    List<Client> personList = context.Clients.ToList();
+    Client? person = null;
+    foreach (var client in personList)
+    {
+        if (Cryptography.Cryptography.VerifyHashedPassword(client.Email, loginData.Email))
+        {
+            person = client; 
+            break;
+        }
+    }
     // если пользователь не найден, отправляем статусный код 401
     if (person is null) return Results.Unauthorized();
 
