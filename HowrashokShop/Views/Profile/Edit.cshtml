@@ -1,0 +1,70 @@
+﻿@model HowrashokShop.Models.Client
+
+@{
+    ViewData["Title"] = "Edit";
+}
+@{
+    Layout = "_Layout";
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/css/AuthForm.css">
+
+<div class="content">
+    <div class="form-container">
+        <div class="dopcontent">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <label asp-for="LastName" style="font-family: 'Ubuntu Condensed', sans-serif; color: #5893B9" class="control-label">Фамилия</label>
+                    <input asp-for="LastName" style="width: 80%;
+                                                         border: 2px solid #5893B9;
+                                                         border-radius: 10px;
+                                                         outline: none;
+                                                         background: #DEEFFA;
+                                                         color: #5893B9;
+                                                         font-family: 'Ubuntu Condensed', sans-serif;" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="FirstName" style="font-family: 'Ubuntu Condensed', sans-serif; color: #5893B9" class="control-label">Имя</label>
+                    <input asp-for="FirstName" style="width: 80%;
+                                                         border: 2px solid #5893B9;
+                                                         border-radius: 10px;
+                                                         outline: none;
+                                                         background: #DEEFFA;
+                                                         color: #5893B9;
+                                                         font-family: 'Ubuntu Condensed', sans-serif;" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" style="font-family: 'Ubuntu Condensed', sans-serif; color: #5893B9" class="control-label"></label>
+                    <input asp-for="Email" style="width: 80%;
+                                                         border: 2px solid #5893B9;
+                                                         border-radius: 10px;
+                                                         outline: none;
+                                                         background: #DEEFFA;
+                                                         color: #5893B9;
+                                                         font-family: 'Ubuntu Condensed', sans-serif;" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Birthday" style="font-family: 'Ubuntu Condensed', sans-serif; color: #5893B9" class="control-label">Дата рождения</label>
+                    <input asp-for="Birthday" type="date" style="width: 80%;
+                                                         border: 2px solid #5893B9;
+                                                         border-radius: 10px;
+                                                         outline: none;
+                                                         background: #DEEFFA;
+                                                         color: #5893B9;
+                                                         font-family: 'Ubuntu Condensed', sans-serif;" class="form-control" />
+                    <span asp-validation-for="Birthday" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="submitLogin" class="form-button">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

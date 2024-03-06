@@ -7,7 +7,7 @@ async function CheckToken(e) {
     const token = localStorage.getItem(tokenKey);
     const userlogin = localStorage.getItem(login);
     // отправляем запрос к "/data
-    const response = await fetch("/data", {
+    const response = await fetch("/Profile", {
         method: "GET",
         headers: {
             "Accept": "application/json",
@@ -16,8 +16,7 @@ async function CheckToken(e) {
     });
 
     if (response.ok === true) {
-        const data = await response.json();
-        var str = "/OrdersServices?login=" + userlogin
+        var str = "/Profile/Edit?login="+userlogin
         location.href = str
     }
     else
@@ -28,14 +27,6 @@ CheckToken();
 document.getElementById("submitLogin").addEventListener("click", async e => {
     e.preventDefault();
     // отправляет запрос и получаем ответ
-    let responseLogin = await fetch(`/api/ReturnHash?str=${document.getElementById("login").value}`, {
-        method: "GET"
-    });
-    let login = await responseLogin.text()
-    let responcePassword = (await fetch(`/api/ReturnHash?str=${document.getElementById("password").value}`, {
-        method: "GET"
-    }));
-    let password = await responcePassword.text()
     const response = await fetch("/login", {
         method: "POST",
         headers: { "Accept": "application/json", "Content-Type": "application/json" },
@@ -48,13 +39,10 @@ document.getElementById("submitLogin").addEventListener("click", async e => {
     if (response.ok === true) {
         // получаем данные
         const data = await response.json();
-        //// изменяем содержимое и видимость блоков на странице
-        //document.getElementById("userName").innerText = data.username;
-        //document.getElementById("userInfo").style.display = "block";
-        //document.getElementById("loginForm").style.display = "none";
         // сохраняем в хранилище sessionStorage токен доступа
         localStorage.setItem(tokenKey, data.access_token);
         localStorage.setItem('userlogin', data.username);
+        CheckToken();
     }
     else  // если произошла ошибка, получаем код статуса
         console.log("Status: ", response.status);

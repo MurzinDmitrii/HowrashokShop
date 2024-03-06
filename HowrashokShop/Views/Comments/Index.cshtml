@@ -8,11 +8,13 @@
     Layout = "_Layout";
 }
 
-@foreach (var item in Model) {
-    <div>
-        <img src="~/Images/@item.Product.Photos.ToList()[0].Photopath" class="img_item" width="100%" />
-        @Html.DisplayFor(modelItem => item.Client.FirstName)
-        @Html.DisplayFor(modelItem => item.Product.Name)
-        @Html.DisplayFor(modelItem => item.Comment1)
-    </div>
-}
+<div class="content">
+    @foreach (var item in Model)
+    {
+        <div>
+            @Html.DisplayFor(modelItem => item.Client.FirstName)
+            @Html.DisplayFor(modelItem => item.Product.Name)
+            @Html.DisplayFor(modelItem => item.Comment1)
+        </div>
+    }
+</div>

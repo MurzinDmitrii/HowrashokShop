@@ -2,6 +2,7 @@ using HowrashokShop.Classes;
 using HowrashokShop.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.OAuth;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Options;
@@ -14,6 +15,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<HowrashokShopContext>(
     options => options.UseSqlServer(File.ReadAllText("connectionString.txt")));
 builder.Services.AddMvc(options => options.EnableEndpointRouting = false);
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -35,8 +37,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuerSigningKey = true,
         };
     });
-builder.Services.AddAuthorization();
 
+builder.Services.AddAuthorization();
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.Cookie.SameSite = SameSiteMode.None;
@@ -45,26 +47,14 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 var app = builder.Build();
 
-app.UseAuthentication();
-app.UseAuthentication();
 app.UseDeveloperExceptionPage();
+app.UseDefaultFiles();
 app.UseStaticFiles();
 app.UseStatusCodePages();
 app.UseMvcWithDefaultRoute();
 
-app.Map("/login/{username}", (string username) =>
-{
-    HowrashokShopContext context = new ();
-    var claims = new List<Claim> { new Claim(ClaimTypes.Name, username) };
-    var jwt = new JwtSecurityToken(
-            issuer: AuthOptions.ISSUER,
-            audience: AuthOptions.AUDIENCE,
-            claims: claims,
-            expires: DateTime.UtcNow.Add(TimeSpan.FromMinutes(2)), // время действия 2 минуты
-            signingCredentials: new SigningCredentials(AuthOptions.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
-
-    return new JwtSecurityTokenHandler().WriteToken(jwt);
-});
+app.UseAuthentication();
+app.UseAuthentication();
 
 app.MapPost("/login", (LoginClass loginData) =>
 {
@@ -74,16 +64,20 @@ app.MapPost("/login", (LoginClass loginData) =>
     Client? person = null;
     foreach (var client in personList)
     {
-        if (Cryptography.Cryptography.VerifyHashedPassword(client.Email, loginData.Email))
+        if (client.Email == loginData.Email)
         {
-            person = client; 
-            break;
+            ClientsPassword clientPassword = context.ClientsPasswords.FirstOrDefault(c => c.ClientId == client.Id);
+            if (Cryptography.Cryptography.VerifyHashedPassword(clientPassword.Password, loginData.Password))
+            {
+                person = client;
+                break;
+            }
         }
     }
     // если пользователь не найден, отправляем статусный код 401
     if (person is null) return Results.Unauthorized();
 
-    var claims = new List<Claim> { new Claim(ClaimTypes.Name, Convert.ToString(person.Email)) };
+    var claims = new List<Claim> { new Claim(ClaimTypes.Name, person.Email) };
     // создаем JWT-токен
     var jwt = new JwtSecurityToken(
             issuer: AuthOptions.ISSUER,
@@ -102,6 +96,18 @@ app.MapPost("/login", (LoginClass loginData) =>
 
     return Results.Json(response);
 });
+
+app.UseRouting();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "Profile",
+        pattern: "Profile",
+        defaults: new { controller = "Profile", action = "Index" }
+    ).RequireAuthorization(new AuthorizeAttribute { AuthenticationSchemes = "Bearer" });
+});
+
 
 app.MapControllerRoute(
     name: "default",

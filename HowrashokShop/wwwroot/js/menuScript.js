@@ -12,4 +12,7 @@ window.onload = function () {
     if (currentLocation == "/Auth") {
         document.getElementById('menu').children[3].children[0].classList.add("current");
     }
+    if (currentLocation == "/Profile/Edit") {
+        document.getElementById('menu').children[3].children[0].classList.add("current");
+    }
 }
