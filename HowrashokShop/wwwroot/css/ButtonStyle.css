@@ -1,0 +1,14 @@
+﻿button {
+    border: none;
+    background: #5893B9;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #DEEFFA;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+button:before {
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: #DEEFFA;
+}

@@ -31,11 +31,22 @@
         </button>
     </div>
     <div class="col-md-8 content">
-        <h1 class="margin_class minus_margin_class">@Html.DisplayFor(modelItem => Model.Name)</h1>
-        <p class="margin_class">@Html.DisplayFor(modelItem => Model.Description)</p>
+        <h1 class="margin_class minus_margin_class" style="font-family: 'Ubuntu Condensed', sans-serif;
+                                                           color: #5893B9;">
+            @Html.DisplayFor(modelItem => Model.Name)
+        </h1>
+        <p class="margin_class mainfont" style="font-family: 'Ubuntu Condensed', sans-serif;
+                                                           color: #5893B9;">@Html.DisplayFor(modelItem => Model.Description)</p>
+        <p class="margin_class mainfont" style="font-family: 'Ubuntu Condensed', sans-serif;
+                                                           color: #5893B9;">@Html.DisplayFor(modelItem => Model.Costs.OrderByDescending(c => c.DateOfSetting).ToList()[0].Size)&#8381;</p>
         <form asp-action="">
-            <input type="submit" value="Go to Google" />
+            <button type="submit" style="margin-left: 5%;
+                                         margin-right: 5%;
+                                         margin-bottom: 5%;">
+                В корзину
+            </button>
         </form>
+        <link href="~/css/ButtonStyle.css" rel="stylesheet"/>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>

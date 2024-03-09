@@ -10,6 +10,16 @@
     margin-bottom: 5%;
     padding: 0%;
 }
-.content{
+#carouselExample {
+    height:30%;
+}
+﻿.mainfont {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 16px;
+    color: #5893B9;
+}
 
+.dopfont {
+    font-size: 12px;
+    color: #5893B9;
 }
