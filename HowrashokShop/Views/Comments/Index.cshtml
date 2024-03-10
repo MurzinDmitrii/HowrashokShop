@@ -12,6 +12,7 @@
     @foreach (var item in Model)
     {
         <div>
+            @Html.DisplayFor(modelItem => item.Product.Photos.FirstOrDefault())
             @Html.DisplayFor(modelItem => item.Client.FirstName)
             @Html.DisplayFor(modelItem => item.Product.Name)
             @Html.DisplayFor(modelItem => item.Comment1)

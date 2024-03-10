@@ -22,22 +22,29 @@
         
     </div>
     <div class="row mt-2 mb-5 margin_row">
-        @foreach (var item in Model)
+        @if(Model.Count() == 0)
         {
-            @if (item.Arhived == false)
+            <h1 class="mainfont" style="font-size:larger; display:flex; justify-content: center; align-items: center;">Не найдено!</h1>
+        }
+        else
+        {
+            @foreach (var item in Model)
             {
-                <div class="col-md-3 item">
-                    <a asp-action="Details" asp-route-id="@item.Id">
-                        <div>
-                            <img src="~/Images/@Html.DisplayFor(modelItem => item.Photos.OrderBy(c => c.Id).ToList()[0].Photopath)" class="img_item" width="100%" />
-                            <div class="main_in_item">
-                                <p class="mainfont">@Html.DisplayFor(modelItem => item.Category.Name)</p>
-                                <p class="mainfont">@Html.DisplayFor(modelItem => item.Costs.OrderByDescending(c => c.DateOfSetting).ToList()[0].Size)</p>
+                @if (item.Arhived == false)
+                {
+                    <div class="col-md-3 item">
+                        <a asp-action="Details" asp-route-id="@item.Id">
+                            <div>
+                                <img src="~/Images/@Html.DisplayFor(modelItem => item.Photos.OrderBy(c => c.Id).ToList()[0].Photopath)" class="img_item" width="100%" />
+                                <div class="main_in_item">
+                                    <p class="mainfont">@Html.DisplayFor(modelItem => item.Category.Name)</p>
+                                    <p class="mainfont">@Html.DisplayFor(modelItem => item.Costs.OrderByDescending(c => c.DateOfSetting).ToList()[0].Size)</p>
+                                </div>
+                                <p class="dopfont">@Html.DisplayFor(modelItem => item.DescToShort)</p>
                             </div>
-                            <p class="dopfont">@Html.DisplayFor(modelItem => item.DescToShort)</p>
-                        </div>
-                    </a>
-                </div>
+                        </a>
+                    </div>
+                }
             }
         }
     </div>

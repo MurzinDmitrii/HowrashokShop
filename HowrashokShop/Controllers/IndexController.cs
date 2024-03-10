@@ -178,6 +178,14 @@ namespace HowrashokShop.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public IActionResult OpenDocument()
+        {
+            string filePath = "Policy.docx";
+            byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
+            string fileName = "Policy.docx";
+            return File(fileBytes, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", fileName);
+        }
+
         private bool ProductExists(int id)
         {
           return (_context.Products?.Any(e => e.Id == id)).GetValueOrDefault();
