@@ -1,5 +1,6 @@
 using HowrashokShop.Classes;
 using HowrashokShop.Models;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.OAuth;
 using Microsoft.AspNetCore.Authorization;
@@ -49,6 +50,23 @@ builder.Services.ConfigureApplicationCookie(options =>
 {
     options.Cookie.SameSite = SameSiteMode.None;
     options.Cookie.SecurePolicy = CookieSecurePolicy.None;
+});
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MyPolicy",
+        policy =>
+        {
+            policy.AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+});
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(5001); // to listen for incoming http connection on port 5001 
+    options.ListenAnyIP(7001, configure => configure.UseHttps()); // to listen for incoming https connection on port 7001 
 });
 
 var app = builder.Build();
@@ -114,10 +132,12 @@ app.UseEndpoints(endpoints =>
     ).RequireAuthorization(new AuthorizeAttribute { AuthenticationSchemes = "Bearer" });
 });
 
-
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Index}/{action=Index}");
+
+app.UseCors("MyPolicy");
+
 
 app.Run(async (context) =>
 {

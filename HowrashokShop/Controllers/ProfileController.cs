@@ -19,9 +19,9 @@ namespace HowrashokShop.Controllers
         }
 
         // GET: Profile
-        public async void Index(string login)
+        public async Task<IActionResult> Index(string login)
         {
-              
+            return Redirect("~/Index");
         }
 
         // GET: Profile/Details/5

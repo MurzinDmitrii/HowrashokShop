@@ -7,20 +7,22 @@ async function CheckToken(e) {
     const token = localStorage.getItem(tokenKey);
     const userlogin = localStorage.getItem(login);
     // отправляем запрос к "/data
-    const response = await fetch("/Profile", {
-        method: "GET",
-        headers: {
-            "Accept": "application/json",
-            "Authorization": "Bearer " + token  // передача токена в заголовке
-        }
-    });
+    if (token != null) {
+        const response = await fetch("/Profile", {
+            method: "GET",
+            headers: {
+                "Accept": "application/json",
+                "Authorization": "Bearer " + token  // передача токена в заголовке
+            }
+        });
 
-    if (response.ok === true) {
-        var str = "/Profile/Edit?login="+userlogin
-        location.href = str
+        if (response.ok === true) {
+            var str = "/Profile/Edit?login=" + userlogin
+            location.href = str
+        }
+        else
+            console.log("Status: ", response.status);
     }
-    else
-        console.log("Status: ", response.status);
 }
 CheckToken();
 // при нажатии на кнопку отправки формы идет запрос к /login для получения токена
