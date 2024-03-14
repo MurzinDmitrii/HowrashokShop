@@ -16,7 +16,7 @@
         @using (Html.BeginForm())
         {
             @Html.TextBox("SearchString", null, new { placeholder = "Искать здесь..." })
-            <button type="submit"></button>
+            <button type="submit" id="SendButton"></button>
         }
         <link rel="stylesheet" href="~/css/SearchStyle.css"/>
         

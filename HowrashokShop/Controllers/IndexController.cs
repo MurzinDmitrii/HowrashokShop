@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using HowrashokShop.Models;
 using System.Drawing;
 using Microsoft.Data.SqlClient;
+using Microsoft.AspNetCore.Http;
 
 namespace HowrashokShop.Controllers
 {
@@ -184,6 +185,14 @@ namespace HowrashokShop.Controllers
             byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
             string fileName = "Policy.docx";
             return File(fileBytes, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", fileName);
+        }
+
+        public IActionResult AddBusket(int id)
+        {
+            var cookieValue = HttpContext.Request.Cookies["userlogin"];
+            int clientId = _context.Clients.FirstOrDefault(c => c.Email == cookieValue).Id;
+            _context.Buskets.Add(new Busket() { ProductId = id, ClientId = id});
+            return Redirect("~/Index");
         }
 
         private bool ProductExists(int id)
