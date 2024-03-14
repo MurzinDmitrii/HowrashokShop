@@ -21,14 +21,16 @@ namespace HowrashokShop.Controllers
         // GET: Arhive
         public async Task<IActionResult> Index()
         {
-            var howrashokShopContext = _context.Products.Include(p => p.Category).Include(p => p.Theme).Include(p => p.Costs).Include(p => p.Photos);
+            var products = _context.Products.ToList();
+            foreach (var product in products)
+            {
+                product.Category = _context.Categories.FirstOrDefault(c => c.Id == product.CategoryId);
+                product.Theme = _context.Themes.FirstOrDefault(t => t.Id == product.ThemeId);
+                product.Costs = _context.Costs.Where(cost => cost.ProductId == product.Id).ToList();
+                product.Photos = _context.Photos.Where(photo => photo.ProductId == product.Id).ToList();
+            }
 
-            List<Category> categories = new List<Category>();
-            categories.Add(new Category { Name = "Все" });
-            categories.AddRange(_context.Categories.ToList());
-            ViewBag.Categories = new SelectList(categories, "Id", "Name");
-
-            return View(await howrashokShopContext.ToListAsync());
+            return View(products);
         }
 
         // GET: Arhive/Details/5

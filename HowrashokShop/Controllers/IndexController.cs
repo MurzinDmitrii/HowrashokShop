@@ -26,8 +26,15 @@ namespace HowrashokShop.Controllers
         {
             int index = 0;
 
-            var howrashokShopContext = _context.Products.Include(p => p.Category).Include(p => p.Theme).Include(p => p.Costs).Include(p => p.Photos);
-            var productsList = await howrashokShopContext.ToListAsync();
+            var products = _context.Products.ToList();
+            foreach (var product in products)
+            {
+                product.Category = _context.Categories.FirstOrDefault(c => c.Id == product.CategoryId);
+                product.Theme = _context.Themes.FirstOrDefault(t => t.Id == product.ThemeId);
+                product.Costs = _context.Costs.Where(cost => cost.ProductId == product.Id).ToList();
+                product.Photos = _context.Photos.Where(photo => photo.ProductId == product.Id).ToList();
+            }
+            var productsList = products;
 
             if (!String.IsNullOrEmpty(searchString))
             {
