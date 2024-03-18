@@ -421,3 +421,7 @@ Path: /favicon.ico  Time:0:49:02
 Path: /favicon.ico  Time:0:49:06
 An unhandled exception has occurred while executing the request.
 Path: /favicon.ico  Time:0:49:07
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:1:00:37
+Path: /favicon.ico  Time:1:00:38
+Path: /favicon.ico  Time:1:00:43
