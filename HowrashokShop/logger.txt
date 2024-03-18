@@ -271,11 +271,27 @@ Path: /favicon.ico  Time:21:23:28
 Path: /favicon.ico  Time:21:23:35
 Path: /favicon.ico  Time:21:23:40
 Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+<<<<<<< HEAD
+An error occurred using the connection to database 'HowrashokShop' on server 'DESKTOP-2SIE918'.
+An exception occurred while iterating over the results of a query for context type 'HowrashokShop.Models.HowrashokShopContext'.
+System.InvalidOperationException: An exception has been raised that is likely due to a transient failure. Consider enabling transient error resiliency by adding 'EnableRetryOnFailure' to the 'UseSqlServer' call.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): A connection was successfully established with the server, but then an error occurred during the login process. (provider: Shared Memory Provider, error: 0 - С обоих концов канала отсутствуют процессы.)
+ ---> System.ComponentModel.Win32Exception (233): С обоих концов канала отсутствуют процессы.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ThrowExceptionAndWarning(Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniError(TdsParserStateObject stateObj, UInt32 error)
+   at Microsoft.Data.SqlClient.TdsParserStateObject.ReadSniSyncOverAsync()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadNetworkPacket()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryPrepareBuffer()
+   at Microsoft.Data.SqlClient.TdsParserStateObject.TryReadByte(Byte& value)
+=======
 An error occurred using the connection to database 'HowrashokShop' on server '127.0.0.1,1433'.
 An exception occurred while iterating over the results of a query for context type 'HowrashokShop.Models.HowrashokShopContext'.
 Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'Dmitrii'.
    at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
    at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+>>>>>>> 1489e96f7aaa5bb996e19e8fb0747ca352a5ac88
    at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
    at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
    at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
@@ -296,6 +312,40 @@ Microsoft.Data.SqlClient.SqlException (0x80131904): Login failed for user 'Dmitr
    at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
    at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+<<<<<<< HEAD
+ClientConnectionId:14da649e-5c65-4867-a125-afb60114d8f4
+Error Number:233,State:0,Class:20
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:15:06:57
+Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+Path: /favicon.ico  Time:15:07:10
+Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+Path: /favicon.ico  Time:15:40:16
+Path: /favicon.ico  Time:15:42:53
+Path: /favicon.ico  Time:15:42:53
+Path: /7D8B79A2-8974-4D7B-A76A-F4F29624C06B0fvQpPILlWY8GZo02ETbIB661Ll2_PVeNyQlLNVKZn-AVBUpe7lTBlBgPapS9vA387VOsnfnKuJIkzcufGIfIw/websocket  Time:15:43:19
+An unhandled exception has occurred while executing the request.
+The response has already started, the error page middleware will not be executed.
+An unhandled exception has occurred while executing the request.
+The response has already started, the error page middleware will not be executed.
+Connection id "0HN23BAS7CNBM", Request id "0HN23BAS7CNBM:00000015": An unhandled exception was thrown by the application.
+Path: /favicon.ico  Time:15:43:19
+Path: /favicon.ico  Time:15:43:19
+Path: /favicon.ico  Time:15:43:38
+Path: /favicon.ico  Time:15:43:39
+Path: /favicon.ico  Time:15:43:40
+Path: /favicon.ico  Time:15:43:40
+Path: /favicon.ico  Time:15:44:03
+Path: /favicon.ico  Time:15:44:04
+Path: /favicon.ico  Time:15:44:05
+Path: /favicon.ico  Time:15:44:06
+Path: /favicon.ico  Time:15:44:06
+Path: /favicon.ico  Time:15:44:06
+Path: /favicon.ico  Time:19:06:16
+=======
    at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
 ClientConnectionId:c665ac6b-0886-4a35-beb7-b15821650b12
 Error Number:18456,State:1,Class:14
@@ -343,14 +393,89 @@ Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via
 Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
 Path: /favicon.ico  Time:20:42:11
 Path: /favicon.ico  Time:20:43:59
+<<<<<<< HEAD
 Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
-Path: /favicon.ico  Time:0:33:49
-Path: /favicon.ico  Time:0:33:49
-The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
 An unhandled exception has occurred while executing the request.
 Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
-The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An error occurred using the connection to database 'HowrashokShop' on server '127.0.0.1,1433'.
+An exception occurred while iterating over the results of a query for context type 'HowrashokShop.Models.HowrashokShopContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.)
+ ---> System.ComponentModel.Win32Exception (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open()
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerConnection.OpenDbConnection(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.<>c.<MoveNext>b__21_0(DbContext _, Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:10061,State:0,Class:20
 An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:0:41:07
+Path: /favicon.ico  Time:0:41:30
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:0:41:35
+Path: /favicon.ico  Time:0:41:39
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:0:41:40
+Path: /favicon.ico  Time:0:41:42
 Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
-The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+Path: /favicon.ico  Time:0:42:59
+Path: /favicon.ico  Time:0:43:06
+Path: /favicon.ico  Time:0:43:10
+Path: /favicon.ico  Time:0:43:15
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:0:45:32
+Path: /favicon.ico  Time:0:45:34
+Path: /favicon.ico  Time:0:45:37
+Path: /favicon.ico  Time:0:45:44
+Path: /favicon.ico  Time:0:45:45
+Path: /favicon.ico  Time:0:45:51
+Path: /favicon.ico  Time:0:45:53
+Path: /favicon.ico  Time:0:46:18
+Path: /favicon.ico  Time:0:46:20
+Path: /favicon.ico  Time:0:46:23
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:0:46:46
+Path: /favicon.ico  Time:0:46:47
+Path: /favicon.ico  Time:0:46:50
+Path: /favicon.ico  Time:0:47:00
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:0:48:25
+Path: /favicon.ico  Time:0:48:36
+Path: /favicon.ico  Time:0:48:45
+Path: /favicon.ico  Time:0:48:52
+Path: /favicon.ico  Time:0:48:53
+Path: /favicon.ico  Time:0:48:56
+Path: /favicon.ico  Time:0:48:56
+Path: /favicon.ico  Time:0:49:02
+Path: /favicon.ico  Time:0:49:06
 An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:0:49:07
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:1:00:37
+Path: /favicon.ico  Time:1:00:38
+Path: /favicon.ico  Time:1:00:43
+=======
+>>>>>>> 1489e96f7aaa5bb996e19e8fb0747ca352a5ac88
+>>>>>>> 60888cd8854c395eb6ad585d7193a116e7dff864
