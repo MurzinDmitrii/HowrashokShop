@@ -343,3 +343,14 @@ Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via
 Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
 Path: /favicon.ico  Time:20:42:11
 Path: /favicon.ico  Time:20:43:59
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:0:33:49
+Path: /favicon.ico  Time:0:33:49
+The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
