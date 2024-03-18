@@ -479,3 +479,54 @@ Path: /favicon.ico  Time:1:00:43
 =======
 >>>>>>> 1489e96f7aaa5bb996e19e8fb0747ca352a5ac88
 >>>>>>> 60888cd8854c395eb6ad585d7193a116e7dff864
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:1:11:26
+Path: /favicon.ico  Time:1:11:41
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /  Time:1:19:08
+The view 'Index' was not found. Searched locations: /Views/Auth/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+Path: /Archive  Time:1:19:32
+The view 'Index' was not found. Searched locations: /Views/Arhive/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+An unhandled exception has occurred while executing the request.
+The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+The view 'Index' was not found. Searched locations: /Views/Auth/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+An unhandled exception has occurred while executing the request.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+The view 'Details' was not found. Searched locations: /Views/Index/Details.cshtml, /Views/Shared/Details.cshtml, /Pages/Shared/Details.cshtml
+An unhandled exception has occurred while executing the request.
+The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:1:37:08
+Path: /favicon.ico  Time:1:37:18
+Path: /favicon.ico  Time:1:37:21
+Path: /favicon.ico  Time:1:37:22
+Path: /favicon.ico  Time:1:37:24
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:1:37:25
+Path: /favicon.ico  Time:1:37:27
+Path: /favicon.ico  Time:1:37:28
+Path: /favicon.ico  Time:1:37:30
+Path: /favicon.ico  Time:1:37:31
