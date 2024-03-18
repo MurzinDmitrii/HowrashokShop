@@ -19,16 +19,26 @@ namespace HowrashokShop.Controllers
         }
 
         // GET: Arhive
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            var howrashokShopContext = _context.Products.Include(p => p.Category).Include(p => p.Theme).Include(p => p.Costs).Include(p => p.Photos);
+            int index = 0;
 
-            List<Category> categories = new List<Category>();
-            categories.Add(new Category { Name = "Все" });
-            categories.AddRange(_context.Categories.ToList());
-            ViewBag.Categories = new SelectList(categories, "Id", "Name");
+            var products = _context.Products.ToList();
+            foreach (var product in products)
+            {
+                product.Category = _context.Categories.FirstOrDefault(c => c.Id == product.CategoryId);
+                product.Theme = _context.Themes.FirstOrDefault(t => t.Id == product.ThemeId);
+                product.Costs = _context.Costs.Where(cost => cost.ProductId == product.Id).ToList();
+                product.Photos = _context.Photos.Where(photo => photo.ProductId == product.Id).ToList();
+            }
+            var productsList = products;
 
-            return View(await howrashokShopContext.ToListAsync());
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                productsList = productsList.Where(s => s.Description.ToLower().Contains(searchString.ToLower())).ToList();
+            }
+
+            return View(productsList);
         }
 
         // GET: Arhive/Details/5
