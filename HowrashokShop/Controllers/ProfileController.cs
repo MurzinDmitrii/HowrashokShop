@@ -53,13 +53,41 @@ namespace HowrashokShop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,LastName,FirstName,Email,Birthday")] Client client)
+        public async Task<IActionResult> Create([Bind("Id,LastName,FirstName,Email,Birthday,ClientsPassword.Password")] Client client, ClientsPassword clientsPassword)
         {
+            clientsPassword.Client = client;
+            clientsPassword.ClientId = client.Id;
+            if(clientsPassword.Password != null)
+            {
+                clientsPassword.Password = Cryptography.Cryptography.HashPassword(clientsPassword.Password);
+            }
+            else
+            {
+                ModelState.AddModelError("ClientsPassword.Password", "Пароль не может быть пустым");
+            }
+            ModelState.ClearValidationState(nameof(ClientsPassword));
+
+            if (!TryValidateModel(clientsPassword, nameof(ClientsPassword)))
+            {
+                return View(client);
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View(client);
+            }
             if (ModelState.IsValid)
             {
-                _context.Add(client);
+                var login = _context.Clients.FirstOrDefaultAsync(c => c.Email == client.Email);
+                if (await login != null)
+                {
+                    ModelState.AddModelError("Email", "Такой email уже зарегистрирован");
+                    return View(client);
+                }
+                await _context.AddAsync(client);
+                await _context.AddAsync(clientsPassword);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return Redirect("~/Auth");
             }
             return View(client);
         }

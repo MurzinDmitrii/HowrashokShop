@@ -530,3 +530,420 @@ Path: /favicon.ico  Time:1:37:27
 Path: /favicon.ico  Time:1:37:28
 Path: /favicon.ico  Time:1:37:30
 Path: /favicon.ico  Time:1:37:31
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:15:07:07
+Path: /favicon.ico  Time:15:07:07
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:19:36:38
+Path: /favicon.ico  Time:19:36:38
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:24:17
+Path: /favicon.ico  Time:13:24:19
+Path: /favicon.ico  Time:13:24:20
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:29:40
+Path: /favicon.ico  Time:13:29:41
+Path: /favicon.ico  Time:13:29:43
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:31:13
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:33:20
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:13:33:24
+Path: /favicon.ico  Time:13:33:25
+Path: /favicon.ico  Time:13:33:27
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:34:42
+Path: /favicon.ico  Time:13:34:45
+Path: /favicon.ico  Time:13:34:46
+Path: /favicon.ico  Time:13:34:47
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:35:28
+Path: /favicon.ico  Time:13:35:29
+Path: /favicon.ico  Time:13:35:31
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:22:00:53
+Path: /favicon.ico  Time:22:00:54
+Path: /favicon.ico  Time:22:01:01
+Path: /favicon.ico  Time:22:01:05
+Path: /favicon.ico  Time:22:01:12
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:22:04:10
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:22:04:41
+Path: /favicon.ico  Time:22:04:42
+Path: /favicon.ico  Time:22:04:42
+Path: /favicon.ico  Time:22:04:52
+Path: /favicon.ico  Time:22:04:52
+Path: /favicon.ico  Time:22:05:12
+Path: /favicon.ico  Time:22:05:13
+Path: /favicon.ico  Time:22:05:14
+Path: /favicon.ico  Time:22:05:31
+Path: /favicon.ico  Time:22:05:35
+Path: /favicon.ico  Time:22:05:39
+Path: /favicon.ico  Time:22:05:45
+Path: /favicon.ico  Time:22:05:46
+Path: /favicon.ico  Time:22:05:46
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:22:06:53
+Path: /favicon.ico  Time:22:07:00
+Path: /favicon.ico  Time:22:07:04
+Path: /favicon.ico  Time:22:07:04
+Path: /favicon.ico  Time:22:07:04
+Path: /favicon.ico  Time:22:07:04
+Path: /favicon.ico  Time:22:07:04
+Path: /favicon.ico  Time:22:07:05
+Path: /favicon.ico  Time:22:07:05
+Path: /favicon.ico  Time:22:07:05
+Path: /favicon.ico  Time:22:07:06
+Path: /favicon.ico  Time:22:07:07
+Path: /favicon.ico  Time:22:07:07
+Path: /favicon.ico  Time:22:07:10
+Path: /favicon.ico  Time:22:07:10
+Path: /favicon.ico  Time:22:07:10
+Path: /favicon.ico  Time:22:07:20
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:22:07:22
+Path: /favicon.ico  Time:22:07:24
+Path: /favicon.ico  Time:22:07:29
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:22:08:13
+Path: /favicon.ico  Time:22:08:15
+Path: /favicon.ico  Time:22:08:17
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:22:08:17
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:22:09:08
+Path: /favicon.ico  Time:22:09:31
+Path: /favicon.ico  Time:22:09:31
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:22:12:19
+Path: /favicon.ico  Time:22:12:23
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:22:12:27
+Path: /favicon.ico  Time:22:12:28
+Path: /favicon.ico  Time:22:12:30
+Path: /favicon.ico  Time:22:12:30
+Path: /favicon.ico  Time:22:12:31
+Path: /favicon.ico  Time:22:12:32
+Path: /favicon.ico  Time:22:12:37
+Path: /favicon.ico  Time:22:12:37
+Path: /favicon.ico  Time:22:12:37
+Path: /favicon.ico  Time:22:12:38
+Path: /favicon.ico  Time:22:12:40
+Path: /favicon.ico  Time:22:12:41
+Path: /favicon.ico  Time:22:12:41
+Path: /favicon.ico  Time:22:12:45
+Path: /favicon.ico  Time:22:12:48
+Path: /favicon.ico  Time:22:12:49
+Path: /favicon.ico  Time:22:13:04
+Path: /favicon.ico  Time:22:13:05
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:22:14:05
+Path: /favicon.ico  Time:22:14:09
+Path: /favicon.ico  Time:22:14:10
+Path: /favicon.ico  Time:22:14:11
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:22:19:16
+Path: /favicon.ico  Time:22:19:17
+Path: /favicon.ico  Time:22:19:18
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:22:23:18
+Path: /favicon.ico  Time:22:23:18
+Path: /favicon.ico  Time:22:23:20
+Path: /favicon.ico  Time:22:23:50
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:22:24:38
+Path: /favicon.ico  Time:22:24:39
+Path: /favicon.ico  Time:22:24:41
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:22:25:35
+Path: /favicon.ico  Time:22:25:37
+Path: /favicon.ico  Time:22:25:38
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:22:26:47
+Path: /favicon.ico  Time:22:26:48
+Path: /favicon.ico  Time:22:26:49
+Path: /favicon.ico  Time:22:27:01
+Path: /favicon.ico  Time:22:27:02
+Path: /favicon.ico  Time:22:27:03
+Path: /favicon.ico  Time:22:27:03
+Path: /favicon.ico  Time:22:27:03
+Path: /favicon.ico  Time:22:27:04
+Path: /favicon.ico  Time:22:27:04
+Path: /favicon.ico  Time:22:27:04
+Path: /favicon.ico  Time:22:27:04
+Path: /favicon.ico  Time:22:27:04
+Path: /favicon.ico  Time:22:27:04
+Path: /favicon.ico  Time:22:27:05
+Path: /favicon.ico  Time:22:27:05
+Path: /favicon.ico  Time:22:27:05
+Path: /favicon.ico  Time:22:27:06
+Path: /favicon.ico  Time:22:27:09
+Path: /favicon.ico  Time:22:27:11
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:22:28:23
+Path: /favicon.ico  Time:22:28:24
+Path: /favicon.ico  Time:22:28:25
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+The view 'Index' was not found. Searched locations: /Views/Index/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:22:28:56
+The view 'Index' was not found. Searched locations: /Views/Auth/Index.cshtml, /Views/Shared/Index.cshtml, /Pages/Shared/Index.cshtml
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:22:29:07
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:22:58:01
+Path: /favicon.ico  Time:22:58:04
+Path: /favicon.ico  Time:22:58:05
+Path: /favicon.ico  Time:22:58:08
+Path: /favicon.ico  Time:22:58:11
+Path: /favicon.ico  Time:22:58:13
+Path: /favicon.ico  Time:22:58:14
+Path: /favicon.ico  Time:23:04:20
+Path: /favicon.ico  Time:23:04:22
+Path: /favicon.ico  Time:23:04:39
+Path: /favicon.ico  Time:23:04:41
+Path: /favicon.ico  Time:23:04:52
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:23:06:07
+Path: /favicon.ico  Time:23:06:09
+Path: /favicon.ico  Time:23:06:10
+Path: /favicon.ico  Time:23:06:42
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:23:09:05
+Path: /favicon.ico  Time:23:09:06
+An error occurred using the connection to database 'HowrashokShop' on server '127.0.0.1,1433'.
+Path: /favicon.ico  Time:23:09:15
+Failed executing DbCommand (65ms) [Parameters=[@__client_Email_0='?' (Size = 3500)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Birthday], [c].[Email], [c].[FirstName], [c].[LastName]
+FROM [Client] AS [c]
+WHERE [c].[Email] = @__client_Email_0
+Path: /favicon.ico  Time:23:09:19
+An exception occurred while iterating over the results of a query for context type 'HowrashokShop.Models.HowrashokShopContext'.
+System.InvalidOperationException: Invalid operation. The connection is closed.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__273_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Failed executing DbCommand (7ms) [Parameters=[@__client_Email_0='?' (Size = 3500)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Birthday], [c].[Email], [c].[FirstName], [c].[LastName]
+FROM [Client] AS [c]
+WHERE [c].[Email] = @__client_Email_0
+An exception occurred while iterating over the results of a query for context type 'HowrashokShop.Models.HowrashokShopContext'.
+System.InvalidOperationException: Invalid operation. The connection is closed.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__273_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Path: /favicon.ico  Time:23:09:21
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:23:10:14
+Path: /favicon.ico  Time:23:10:15
+Path: /favicon.ico  Time:23:10:16
+Path: /favicon.ico  Time:23:10:20
+Path: /favicon.ico  Time:23:10:22
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:23:11:18
+Path: /favicon.ico  Time:23:11:19
+Path: /favicon.ico  Time:23:11:20
+An exception occurred while iterating over the results of a query for context type 'HowrashokShop.Models.HowrashokShopContext'.
+System.InvalidOperationException: Invalid attempt to call ReadAsync when reader is closed.
+   at Microsoft.Data.Common.ADP.ExceptionWithStackTrace(Exception e)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Path: /favicon.ico  Time:23:11:26
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:0:59:30
+Path: /favicon.ico  Time:0:59:33
+Path: /favicon.ico  Time:0:59:34
+An exception occurred while iterating over the results of a query for context type 'HowrashokShop.Models.HowrashokShopContext'.
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'HowrashokShopContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContext.InitializeStateManager(Boolean standAlone)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Path: /favicon.ico  Time:1:00:01
+An exception occurred while iterating over the results of a query for context type 'HowrashokShop.Models.HowrashokShopContext'.
+System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
+Object name: 'HowrashokShopContext'.
+   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContextDependencies.get_StateManager()
+   at Microsoft.EntityFrameworkCore.Query.QueryContext.InitializeStateManager(Boolean standAlone)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Path: /favicon.ico  Time:1:00:07
+Failed executing DbCommand (14ms) [Parameters=[@__client_Email_0='?' (Size = 3500)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[Birthday], [c].[Email], [c].[FirstName], [c].[LastName]
+FROM [Client] AS [c]
+WHERE [c].[Email] = @__client_Email_0
+An exception occurred while iterating over the results of a query for context type 'HowrashokShop.Models.HowrashokShopContext'.
+System.InvalidOperationException: Invalid operation. The connection is closed.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__273_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+Path: /favicon.ico  Time:1:00:18
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+An error occurred using the connection to database 'HowrashokShop' on server '127.0.0.1,1433'.
+Path: /favicon.ico  Time:1:01:55
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:1:03:15
+Path: /favicon.ico  Time:1:03:16
+Path: /favicon.ico  Time:1:03:17
+Failed executing DbCommand (5ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 3500), @p2='?' (Size = 50), @p3='?' (Size = 50)], CommandType='Text', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Client] ([Birthday], [Email], [FirstName], [LastName])
+OUTPUT INSERTED.[ID]
+VALUES (@p0, @p1, @p2, @p3);
+An exception occurred in the database while saving changes for context type 'HowrashokShop.Models.HowrashokShopContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.Data.SqlTypes.SqlTypeException: SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__273_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:1:03:23
+Path: /favicon.ico  Time:1:03:36
+Path: /favicon.ico  Time:1:03:38
+Path: /favicon.ico  Time:1:03:49
+Path: /favicon.ico  Time:1:03:51
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:1:05:57
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:1:08:04
+Path: /favicon.ico  Time:1:08:07
+Path: /favicon.ico  Time:1:08:12
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:1:08:17
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:13:46
+Path: /favicon.ico  Time:13:13:48
+Path: /favicon.ico  Time:13:13:49
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:15:25
+Path: /favicon.ico  Time:13:15:27
+Path: /favicon.ico  Time:13:15:28
+Path: /favicon.ico  Time:13:15:38
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:23:41
+Path: /favicon.ico  Time:13:23:42
+Path: /favicon.ico  Time:13:23:44
+Path: /favicon.ico  Time:13:24:06
+Path: /favicon.ico  Time:13:24:18
+Path: /favicon.ico  Time:13:24:19
+Path: /favicon.ico  Time:13:24:30
+Path: /favicon.ico  Time:13:24:39
+Path: /favicon.ico  Time:13:24:40
+Path: /favicon.ico  Time:13:24:41
+Path: /favicon.ico  Time:13:24:47
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:25:21
+Path: /favicon.ico  Time:13:25:22
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:25:58
+Path: /favicon.ico  Time:13:25:59
+Path: /favicon.ico  Time:13:26:01
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:33:57
+Path: /favicon.ico  Time:13:33:58
+Path: /favicon.ico  Time:13:33:59
+Path: /favicon.ico  Time:13:34:22
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:37:28
+Path: /favicon.ico  Time:13:37:29
+Path: /favicon.ico  Time:13:37:30
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:39:02
+Path: /favicon.ico  Time:13:39:05
+Path: /favicon.ico  Time:13:39:06
+Path: /favicon.ico  Time:13:39:23
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:40:48
+Path: /favicon.ico  Time:13:41:00
+Path: /favicon.ico  Time:13:41:04
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:42:05
+Path: /favicon.ico  Time:13:42:08
+Path: /favicon.ico  Time:13:42:18
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:44:24
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:51:11
+Path: /favicon.ico  Time:13:51:39
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:13:52:44
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:54:15
+Path: /favicon.ico  Time:13:54:42
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:13:55:53
+Path: /favicon.ico  Time:13:56:25
+Path: /favicon.ico  Time:13:56:36

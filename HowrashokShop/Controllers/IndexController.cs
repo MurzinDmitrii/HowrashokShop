@@ -9,6 +9,7 @@ using HowrashokShop.Models;
 using System.Drawing;
 using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Http;
+using SimMetrics.Net.Metric;
 
 namespace HowrashokShop.Controllers
 {
@@ -26,6 +27,8 @@ namespace HowrashokShop.Controllers
         {
             int index = 0;
 
+            JaroWinkler jaro = new();
+
             var products = _context.Products.ToList();
             foreach (var product in products)
             {
@@ -34,14 +37,18 @@ namespace HowrashokShop.Controllers
                 product.Costs = _context.Costs.Where(cost => cost.ProductId == product.Id).ToList();
                 product.Photos = _context.Photos.Where(photo => photo.ProductId == product.Id).ToList();
             }
-            var productsList = products;
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                productsList = productsList.Where(s => s.Description.ToLower().Contains(searchString.ToLower())).ToList();
+                products = (from p in products
+                                               where
+                                jaro.GetSimilarity(p.Description.ToLower(), searchString.ToLower()) > 0.5
+                                               orderby jaro.GetSimilarity(p.Description.ToLower(), searchString.ToLower())
+                                               descending
+                                               select p).ToList();
             }
 
-            return View(productsList);
+            return View(products);
         }
 
         // GET: Index/Details/5

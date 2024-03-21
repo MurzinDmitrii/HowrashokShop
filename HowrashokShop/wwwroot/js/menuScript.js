@@ -3,6 +3,9 @@ window.onload = function () {
     if (currentLocation == "/") {
         document.getElementById('menu').children[0].children[0].classList.add("current");
     }
+    if (currentLocation == "/Index") {
+        document.getElementById('menu').children[0].children[0].classList.add("current");
+    }
     if (currentLocation == "/Comments") {
         document.getElementById('menu').children[1].children[0].classList.add("current");
     }
@@ -13,6 +16,9 @@ window.onload = function () {
         document.getElementById('menu').children[3].children[0].classList.add("current");
     }
     if (currentLocation == "/Profile/Edit") {
+        document.getElementById('menu').children[3].children[0].classList.add("current");
+    }
+    if (currentLocation == "/Profile/Create") {
         document.getElementById('menu').children[3].children[0].classList.add("current");
     }
 }
