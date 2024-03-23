@@ -7,14 +7,56 @@
 @{
     Layout = "_Layout";
 }
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
 
 <div class="content">
+    <div style="height: 20%; width: 20%;" class="item col-md-8 mx-auto">
+        <canvas id="myChart" style="height: 10%; width: 10%;"></canvas>
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['5', '4', '3', '2', '1'],
+                        datasets: [{
+                            label: 'Оценки',
+                            data: [
+            @Model.Count(c => c.Mark == 5),
+            @Model.Count(c => c.Mark == 4),
+            @Model.Count(c => c.Mark == 3),
+            @Model.Count(c => c.Mark == 2),
+            @Model.Count(c => c.Mark == 1)
+                                ],
+                            backgroundColor: 'rgba(88, 147, 185, 1)',
+                            borderColor: 'rgba(88, 147, 185, 1)',
+                            borderWidth: 1,
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            });
+        </script>
+    </div>
     @foreach (var item in Model)
     {
-        <div>
-            @Html.DisplayFor(modelItem => item.Client.FirstName)
-            @Html.DisplayFor(modelItem => item.Product.Name)
-            @Html.DisplayFor(modelItem => item.Comment1)
+        <div class="item col-md-8 mx-auto">
+            <h4 class="mainfont">@Html.DisplayFor(modelItem => item.Client.FirstName)</h4>
+            <h4 class="mainfont">@Html.DisplayFor(modelItem => item.Product.Name)</h4>
+            <div>
+                @for (int i = 0; i < item.Mark; i++)
+                {
+                    <img style="height: 3%;" src="~/Images/star.png"/>
+                }
+            </div>
+            <p class="dopfont">@Html.DisplayFor(modelItem => item.Comment1)</p>
         </div>
     }
 </div>

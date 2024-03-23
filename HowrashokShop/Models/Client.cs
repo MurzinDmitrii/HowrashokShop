@@ -21,6 +21,7 @@ public partial class Client
     [Required(ErrorMessage = "Дата рождения обязательна")]
     public DateTime Birthday { get; set; }
 
+
     public virtual ICollection<Busket> Buskets { get; set; } = new List<Busket>();
 
     public virtual ClientsPassword? ClientsPassword { get; set; }

@@ -13,6 +13,8 @@ public partial class Comment
 
     public string Comment1 { get; set; } = null!;
 
+    public int Mark { get; set; }
+
     public virtual Client Client { get; set; } = null!;
 
     public virtual Product Product { get; set; } = null!;

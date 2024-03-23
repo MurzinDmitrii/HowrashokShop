@@ -1,6 +1,6 @@
 /*
 Created		25.09.2023
-Modified		22.02.2024
+Modified		27.02.2024
 Project		
 Model			
 Company		
@@ -140,6 +140,7 @@ Create table [Comments]
 	[ClientID] Integer NOT NULL,
 	[ProductID] Integer NOT NULL,
 	[Comment] Nvarchar(1000) NOT NULL,
+	[Mark] Integer NOT NULL,
 Primary Key ([ID])
 ) 
 go
@@ -181,5 +182,199 @@ go
 
 Set quoted_identifier off
 go
+
+
+Create role [Admin]
+go
+Create role [Client]
+go
+Create role [UnregisteredClient]
+go
+
+
+/* Roles permissions */
+Grant select on [Product] to [Admin]
+go
+Grant update on [Product] to [Admin]
+go
+Grant delete on [Product] to [Admin]
+go
+Grant insert on [Product] to [Admin]
+go
+Grant references on [Product] to [Admin]
+go
+Grant select on [Category] to [Admin]
+go
+Grant update on [Category] to [Admin]
+go
+Grant delete on [Category] to [Admin]
+go
+Grant insert on [Category] to [Admin]
+go
+Grant references on [Category] to [Admin]
+go
+Grant select on [Cost] to [Admin]
+go
+Grant update on [Cost] to [Admin]
+go
+Grant delete on [Cost] to [Admin]
+go
+Grant insert on [Cost] to [Admin]
+go
+Grant references on [Cost] to [Admin]
+go
+Grant select on [Photo] to [Admin]
+go
+Grant update on [Photo] to [Admin]
+go
+Grant delete on [Photo] to [Admin]
+go
+Grant insert on [Photo] to [Admin]
+go
+Grant references on [Photo] to [Admin]
+go
+Grant select on [Client] to [Admin]
+go
+Grant update on [Client] to [Admin]
+go
+Grant delete on [Client] to [Admin]
+go
+Grant insert on [Client] to [Admin]
+go
+Grant references on [Client] to [Admin]
+go
+Grant select on [Client] to [Client]
+go
+Grant update on [Client] to [Client]
+go
+Grant delete on [Client] to [Client]
+go
+Grant insert on [Client] to [Client]
+go
+Grant references on [Client] to [Client]
+go
+Grant select on [Client] to [UnregisteredClient]
+go
+Grant update on [Client] to [UnregisteredClient]
+go
+Grant delete on [Client] to [UnregisteredClient]
+go
+Grant insert on [Client] to [UnregisteredClient]
+go
+Grant references on [Client] to [UnregisteredClient]
+go
+Grant select on [ClientsPassword] to [Admin]
+go
+Grant update on [ClientsPassword] to [Admin]
+go
+Grant delete on [ClientsPassword] to [Admin]
+go
+Grant insert on [ClientsPassword] to [Admin]
+go
+Grant references on [ClientsPassword] to [Admin]
+go
+Grant select on [ClientsPassword] to [Client]
+go
+Grant update on [ClientsPassword] to [Client]
+go
+Grant delete on [ClientsPassword] to [Client]
+go
+Grant insert on [ClientsPassword] to [Client]
+go
+Grant references on [ClientsPassword] to [Client]
+go
+Grant select on [ClientsPassword] to [UnregisteredClient]
+go
+Grant update on [ClientsPassword] to [UnregisteredClient]
+go
+Grant delete on [ClientsPassword] to [UnregisteredClient]
+go
+Grant insert on [ClientsPassword] to [UnregisteredClient]
+go
+Grant references on [ClientsPassword] to [UnregisteredClient]
+go
+Grant select on [Order] to [Admin]
+go
+Grant update on [Order] to [Admin]
+go
+Grant delete on [Order] to [Admin]
+go
+Grant insert on [Order] to [Admin]
+go
+Grant references on [Order] to [Admin]
+go
+Grant select on [Order] to [Client]
+go
+Grant update on [Order] to [Client]
+go
+Grant delete on [Order] to [Client]
+go
+Grant insert on [Order] to [Client]
+go
+Grant references on [Order] to [Client]
+go
+Grant select on [Theme] to [Admin]
+go
+Grant update on [Theme] to [Admin]
+go
+Grant delete on [Theme] to [Admin]
+go
+Grant insert on [Theme] to [Admin]
+go
+Grant references on [Theme] to [Admin]
+go
+Grant select on [TablePart] to [Admin]
+go
+Grant update on [TablePart] to [Admin]
+go
+Grant delete on [TablePart] to [Admin]
+go
+Grant insert on [TablePart] to [Admin]
+go
+Grant references on [TablePart] to [Admin]
+go
+Grant select on [TablePart] to [Client]
+go
+Grant update on [TablePart] to [Client]
+go
+Grant delete on [TablePart] to [Client]
+go
+Grant insert on [TablePart] to [Client]
+go
+Grant references on [TablePart] to [Client]
+go
+Grant select on [Discount] to [Admin]
+go
+Grant update on [Discount] to [Admin]
+go
+Grant delete on [Discount] to [Admin]
+go
+Grant insert on [Discount] to [Admin]
+go
+Grant references on [Discount] to [Admin]
+go
+Grant select on [Busket] to [Admin]
+go
+Grant update on [Busket] to [Admin]
+go
+Grant delete on [Busket] to [Admin]
+go
+Grant insert on [Busket] to [Admin]
+go
+Grant references on [Busket] to [Admin]
+go
+Grant select on [Busket] to [Client]
+go
+Grant update on [Busket] to [Client]
+go
+Grant delete on [Busket] to [Client]
+go
+Grant insert on [Busket] to [Client]
+go
+Grant references on [Busket] to [Client]
+go
+
+
+/* Users permissions */
 
 

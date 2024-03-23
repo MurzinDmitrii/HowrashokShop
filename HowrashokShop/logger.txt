@@ -947,3 +947,103 @@ Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via
 Path: /favicon.ico  Time:13:55:53
 Path: /favicon.ico  Time:13:56:25
 Path: /favicon.ico  Time:13:56:36
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:14:38:27
+Path: /favicon.ico  Time:14:39:59
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:14:43:37
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:04:17
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:04:46
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:05:32
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:11:08
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:12:38
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:13:27
+Path: /favicon.ico  Time:15:13:28
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:14:15
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:14:40
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:14:59
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:19:48
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:20:23
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:20:36
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:20:53
+Path: /favicon.ico  Time:15:21:12
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:22:05
+Path: /favicon.ico  Time:15:22:47
+Path: /favicon.ico  Time:15:22:48
+Path: /favicon.ico  Time:15:22:49
+Path: /favicon.ico  Time:15:22:51
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:38:56
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:39:51
+Path: /favicon.ico  Time:15:39:52
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:44:29
+Path: /favicon.ico  Time:15:44:32
+Path: /favicon.ico  Time:15:44:33
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:45:24
+Path: /favicon.ico  Time:15:45:25
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:46:18
+Path: /favicon.ico  Time:15:46:20
+Path: /favicon.ico  Time:15:46:21
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:47:01
+Path: /favicon.ico  Time:15:47:02
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:47:46
+Path: /favicon.ico  Time:15:47:47
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:48:15
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:49:24
+Path: /favicon.ico  Time:15:49:25
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:50:04
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:52:52
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:53:21
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:54:39
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:15:55:33
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:17:02:17
+Path: /favicon.ico  Time:17:02:31
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:17:10:24
+Path: /favicon.ico  Time:17:10:35
+Path: /favicon.ico  Time:17:10:36
+Path: /favicon.ico  Time:17:10:38
+Path: /favicon.ico  Time:17:10:38
+Path: /favicon.ico  Time:17:10:39
+Path: /favicon.ico  Time:17:10:40
+Path: /favicon.ico  Time:17:10:41
+Path: /favicon.ico  Time:17:10:42
+Path: /favicon.ico  Time:17:10:49
+Path: /favicon.ico  Time:17:11:01
+Path: /favicon.ico  Time:17:11:02
+Path: /favicon.ico  Time:17:11:03
+Path: /favicon.ico  Time:17:11:09
+Path: /favicon.ico  Time:17:11:20
+Path: /favicon.ico  Time:17:16:12
+Path: /favicon.ico  Time:17:43:48
+Path: /favicon.ico  Time:17:44:47
+Path: /favicon.ico  Time:17:44:56

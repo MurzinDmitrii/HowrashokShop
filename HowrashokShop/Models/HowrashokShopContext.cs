@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace HowrashokShop.Models;
 
@@ -45,11 +44,8 @@ public partial class HowrashokShopContext : DbContext
     public virtual DbSet<Theme> Themes { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseSqlServer(File.ReadAllText("connectionString.txt"));
-        optionsBuilder.ConfigureWarnings(warnings => warnings.Throw(RelationalEventId.MultipleCollectionIncludeWarning));
-    }
-
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer(File.ReadAllText("connectionString.txt"));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -150,7 +146,7 @@ public partial class HowrashokShopContext : DbContext
 
         modelBuilder.Entity<Comment>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Comments__3214EC279D192E3D");
+            entity.HasKey(e => e.Id).HasName("PK__Comments__3214EC2757AC3EB7");
 
             entity.Property(e => e.Id).HasColumnName("ID");
             entity.Property(e => e.ClientId).HasColumnName("ClientID");
@@ -162,12 +158,12 @@ public partial class HowrashokShopContext : DbContext
             entity.HasOne(d => d.Client).WithMany(p => p.Comments)
                 .HasForeignKey(d => d.ClientId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Comments__Client__29221CFB");
+                .HasConstraintName("FK__Comments__Client__3D2915A8");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Comments)
                 .HasForeignKey(d => d.ProductId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Comments__Produc__25518C17");
+                .HasConstraintName("FK__Comments__Produc__3C34F16F");
         });
 
         modelBuilder.Entity<Cost>(entity =>
