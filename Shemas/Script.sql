@@ -1,6 +1,6 @@
 /*
 Created		25.09.2023
-Modified		27.02.2024
+Modified		26.03.2024
 Project		
 Model			
 Company		
@@ -53,7 +53,7 @@ Create table [Client]
 	[ID] Integer Identity NOT NULL,
 	[LastName] Nvarchar(50) NOT NULL,
 	[FirstName] Nvarchar(50) NOT NULL,
-	[Email] Nvarchar(3500) NOT NULL,
+	[Email] Nvarchar(3500) NOT NULL, UNIQUE ([Email]),
 	[Birthday] Datetime NOT NULL,
 Primary Key ([ID])
 ) 
@@ -119,16 +119,17 @@ go
 
 Create table [Admin]
 (
-	[ID] Nvarchar(100) NOT NULL,
+	[ID] int Identity NOT NULL,
 	[FirstName] Nvarchar(50) NOT NULL,
-	[LastName] Nvarchar(1) Identity NOT NULL,
+	[LastName] Nvarchar(50) NOT NULL,
+	[Login] Nvarchar(200) NOT NULL, UNIQUE ([Login]),
 Primary Key ([ID])
 ) 
 go
 
 Create table [AdminPassword]
 (
-	[ID] Nvarchar(100) NOT NULL,
+	[ID] int NOT NULL,
 	[Password] Varbinary(3500) NOT NULL,
 Primary Key ([ID])
 ) 
@@ -145,6 +146,41 @@ Primary Key ([ID])
 ) 
 go
 
+Create table [Chat]
+(
+	[Id] Integer Identity NOT NULL,
+	[ClientId] Integer NOT NULL,
+	[AdminId] int NOT NULL,
+Primary Key ([Id])
+) 
+go
+
+Create table [Message]
+(
+	[Id] Integer Identity NOT NULL,
+	[MesText] Nvarchar(2000) NOT NULL,
+	[Who] Bit NOT NULL,
+	[ChatId] Integer NOT NULL,
+Primary Key ([Id])
+) 
+go
+
+Create table [Material]
+(
+	[Id] Integer Identity NOT NULL,
+	[Name] Nvarchar(100) NOT NULL, UNIQUE ([Name]),
+Primary Key ([Id])
+) 
+go
+
+Create table [ProductMaterials]
+(
+	[ID] Integer NOT NULL,
+	[MaterialId] Integer NOT NULL,
+Primary Key ([ID],[MaterialId])
+) 
+go
+
 
 Alter table [Cost] add  foreign key([ProductID]) references [Product] ([ID])  on update no action on delete no action 
 go
@@ -158,6 +194,8 @@ Alter table [Discount] add  foreign key([ProductID]) references [Product] ([ID])
 go
 Alter table [Comments] add  foreign key([ProductID]) references [Product] ([ID])  on update no action on delete no action 
 go
+Alter table [ProductMaterials] add  foreign key([ID]) references [Product] ([ID])  on update no action on delete no action 
+go
 Alter table [Product] add  foreign key([CategoryID]) references [Category] ([ID])  on update no action on delete no action 
 go
 Alter table [ClientsPassword] add  foreign key([ClientID]) references [Client] ([ID])  on update no action on delete no action 
@@ -168,11 +206,19 @@ Alter table [Busket] add  foreign key([ClientID]) references [Client] ([ID])  on
 go
 Alter table [Comments] add  foreign key([ClientID]) references [Client] ([ID])  on update no action on delete no action 
 go
+Alter table [Chat] add  foreign key([ClientId]) references [Client] ([ID])  on update no action on delete no action 
+go
 Alter table [TablePart] add  foreign key([OrderID],[DateOrder]) references [Order] ([ID],[DateOrder])  on update no action on delete no action 
 go
 Alter table [Product] add  foreign key([ThemeID]) references [Theme] ([ID])  on update no action on delete no action 
 go
 Alter table [AdminPassword] add  foreign key([ID]) references [Admin] ([ID])  on update no action on delete no action 
+go
+Alter table [Chat] add  foreign key([AdminId]) references [Admin] ([ID])  on update no action on delete no action 
+go
+Alter table [Message] add  foreign key([ChatId]) references [Chat] ([Id])  on update no action on delete no action 
+go
+Alter table [ProductMaterials] add  foreign key([MaterialId]) references [Material] ([Id])  on update no action on delete no action 
 go
 
 
@@ -182,199 +228,5 @@ go
 
 Set quoted_identifier off
 go
-
-
-Create role [Admin]
-go
-Create role [Client]
-go
-Create role [UnregisteredClient]
-go
-
-
-/* Roles permissions */
-Grant select on [Product] to [Admin]
-go
-Grant update on [Product] to [Admin]
-go
-Grant delete on [Product] to [Admin]
-go
-Grant insert on [Product] to [Admin]
-go
-Grant references on [Product] to [Admin]
-go
-Grant select on [Category] to [Admin]
-go
-Grant update on [Category] to [Admin]
-go
-Grant delete on [Category] to [Admin]
-go
-Grant insert on [Category] to [Admin]
-go
-Grant references on [Category] to [Admin]
-go
-Grant select on [Cost] to [Admin]
-go
-Grant update on [Cost] to [Admin]
-go
-Grant delete on [Cost] to [Admin]
-go
-Grant insert on [Cost] to [Admin]
-go
-Grant references on [Cost] to [Admin]
-go
-Grant select on [Photo] to [Admin]
-go
-Grant update on [Photo] to [Admin]
-go
-Grant delete on [Photo] to [Admin]
-go
-Grant insert on [Photo] to [Admin]
-go
-Grant references on [Photo] to [Admin]
-go
-Grant select on [Client] to [Admin]
-go
-Grant update on [Client] to [Admin]
-go
-Grant delete on [Client] to [Admin]
-go
-Grant insert on [Client] to [Admin]
-go
-Grant references on [Client] to [Admin]
-go
-Grant select on [Client] to [Client]
-go
-Grant update on [Client] to [Client]
-go
-Grant delete on [Client] to [Client]
-go
-Grant insert on [Client] to [Client]
-go
-Grant references on [Client] to [Client]
-go
-Grant select on [Client] to [UnregisteredClient]
-go
-Grant update on [Client] to [UnregisteredClient]
-go
-Grant delete on [Client] to [UnregisteredClient]
-go
-Grant insert on [Client] to [UnregisteredClient]
-go
-Grant references on [Client] to [UnregisteredClient]
-go
-Grant select on [ClientsPassword] to [Admin]
-go
-Grant update on [ClientsPassword] to [Admin]
-go
-Grant delete on [ClientsPassword] to [Admin]
-go
-Grant insert on [ClientsPassword] to [Admin]
-go
-Grant references on [ClientsPassword] to [Admin]
-go
-Grant select on [ClientsPassword] to [Client]
-go
-Grant update on [ClientsPassword] to [Client]
-go
-Grant delete on [ClientsPassword] to [Client]
-go
-Grant insert on [ClientsPassword] to [Client]
-go
-Grant references on [ClientsPassword] to [Client]
-go
-Grant select on [ClientsPassword] to [UnregisteredClient]
-go
-Grant update on [ClientsPassword] to [UnregisteredClient]
-go
-Grant delete on [ClientsPassword] to [UnregisteredClient]
-go
-Grant insert on [ClientsPassword] to [UnregisteredClient]
-go
-Grant references on [ClientsPassword] to [UnregisteredClient]
-go
-Grant select on [Order] to [Admin]
-go
-Grant update on [Order] to [Admin]
-go
-Grant delete on [Order] to [Admin]
-go
-Grant insert on [Order] to [Admin]
-go
-Grant references on [Order] to [Admin]
-go
-Grant select on [Order] to [Client]
-go
-Grant update on [Order] to [Client]
-go
-Grant delete on [Order] to [Client]
-go
-Grant insert on [Order] to [Client]
-go
-Grant references on [Order] to [Client]
-go
-Grant select on [Theme] to [Admin]
-go
-Grant update on [Theme] to [Admin]
-go
-Grant delete on [Theme] to [Admin]
-go
-Grant insert on [Theme] to [Admin]
-go
-Grant references on [Theme] to [Admin]
-go
-Grant select on [TablePart] to [Admin]
-go
-Grant update on [TablePart] to [Admin]
-go
-Grant delete on [TablePart] to [Admin]
-go
-Grant insert on [TablePart] to [Admin]
-go
-Grant references on [TablePart] to [Admin]
-go
-Grant select on [TablePart] to [Client]
-go
-Grant update on [TablePart] to [Client]
-go
-Grant delete on [TablePart] to [Client]
-go
-Grant insert on [TablePart] to [Client]
-go
-Grant references on [TablePart] to [Client]
-go
-Grant select on [Discount] to [Admin]
-go
-Grant update on [Discount] to [Admin]
-go
-Grant delete on [Discount] to [Admin]
-go
-Grant insert on [Discount] to [Admin]
-go
-Grant references on [Discount] to [Admin]
-go
-Grant select on [Busket] to [Admin]
-go
-Grant update on [Busket] to [Admin]
-go
-Grant delete on [Busket] to [Admin]
-go
-Grant insert on [Busket] to [Admin]
-go
-Grant references on [Busket] to [Admin]
-go
-Grant select on [Busket] to [Client]
-go
-Grant update on [Busket] to [Client]
-go
-Grant delete on [Busket] to [Client]
-go
-Grant insert on [Busket] to [Client]
-go
-Grant references on [Busket] to [Client]
-go
-
-
-/* Users permissions */
 
 

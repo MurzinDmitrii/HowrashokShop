@@ -22,7 +22,16 @@ namespace HowrashokShop.Controllers
         public async Task<IActionResult> Index(string login)
         {
             var howrashokShopContext = _context.Buskets.Include(b => b.Client).Include(b => b.Product);
-            return View(await howrashokShopContext.Where(c => c.Client.Email == login).ToListAsync());
+            var productInBusketList = howrashokShopContext.Where(c => c.Client.Email == login).ToList();
+            List<Product> products = new List<Product>();
+            foreach (var item in productInBusketList)
+            {
+                var product = item.Product;
+                product.Costs = _context.Costs.Where(c => c.ProductId == product.Id).ToList();
+                product.Photos = _context.Photos.Where(c => c.ProductId == product.Id).ToList();
+                products.Add(product);
+            }
+            return View(products);
         }
 
         // GET: Buskets/Details/5

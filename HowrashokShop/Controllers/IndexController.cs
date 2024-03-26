@@ -200,11 +200,11 @@ namespace HowrashokShop.Controllers
             return File(fileBytes, "application/vnd.openxmlformats-officedocument.wordprocessingml.document", fileName);
         }
 
-        public IActionResult AddBusket(int id)
+        public IActionResult AddBusket(string user, int id)
         {
             var cookieValue = HttpContext.Request.Cookies["userlogin"];
-            int clientId = _context.Clients.FirstOrDefault(c => c.Email == cookieValue).Id;
-            _context.Buskets.Add(new Busket() { ProductId = id, ClientId = id});
+            int clientId = _context.Clients.FirstOrDefault(c => c.Email == user).Id;
+            _context.Buskets.Add(new Busket() { ProductId = id, ClientId = clientId});
             return Redirect("~/Index");
         }
 
