@@ -1,4 +1,4 @@
-﻿@model IEnumerable<HowrashokShop.Models.Product>
+﻿@model IEnumerable<HowrashokShop.Models.Busket>
 
 @{
     ViewData["Title"] = "Index";
@@ -12,27 +12,28 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <div class="content">
-    <div class="inline_class search_panel">
-        @using (Html.BeginForm())
-        {
-            @Html.TextBox("SearchString", null, new { placeholder = "Искать здесь..." })
-            <button type="submit"></button>
-        }
-        <link rel="stylesheet" href="~/css/SearchStyle.css" />
-
-    </div>
     <div class="row mt-2 mb-5 margin_row">
         @foreach (var item in Model)
         {
             <div class="col-md-3 item">
                 <a asp-action="Details" asp-route-id="@item.Id">
                     <div>
-                        <img src="~/Images/@Html.DisplayFor(modelItem => item.Photos.OrderBy(c => c.Id).ToList()[0].Photopath)" class="img_item" width="100%" />
+                        <img src="~/Images/@Html.DisplayFor(modelItem => item.Product.Photos.OrderBy(c => c.Id).ToList()[0].Photopath)" class="img_item" width="100%" />
                         <div class="main_in_item">
-                            <p class="mainfont">@Html.DisplayFor(modelItem => item.Category.Name)</p>
-                            <p class="mainfont">@Html.DisplayFor(modelItem => item.Costs.OrderByDescending(c => c.DateOfSetting).ToList()[0].Size)</p>
+                            <p class="mainfont">@Html.DisplayFor(modelItem => item.Product.Category.Name)</p>
+                            <p class="mainfont">@Html.DisplayFor(modelItem => item.Product.Costs.OrderByDescending(c => c.DateOfSetting).ToList()[0].Size)</p>
                         </div>
-                        <p class="dopfont">@Html.DisplayFor(modelItem => item.DescToShort)</p>
+                        <p class="dopfont">@Html.DisplayFor(modelItem => item.Product.DescToShort)</p>
+
+                        <form method="post">
+                            <button id="DeleteButton" type="submit" style="margin-left: 35%;
+                                         margin-right: 35%;
+                                         margin-bottom: 5%;" asp-action="Delete" asp- asp-controller="Buskets" asp-route-id="@item.Id"
+                            asp-route-user="@item.ClientId">
+                                Удалить
+                            </button>
+                        </form>
+                        <link rel="stylesheet" href="~/css/ButtonStyle.css" />
                     </div>
                </a>
             </div>

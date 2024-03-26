@@ -11,7 +11,7 @@ namespace HowrashokShop.Controllers
 {
     public class BusketsController : Controller
     {
-        private readonly HowrashokShopContext _context;
+        private HowrashokShopContext _context;
 
         public BusketsController(HowrashokShopContext context)
         {
@@ -23,15 +23,13 @@ namespace HowrashokShop.Controllers
         {
             var howrashokShopContext = _context.Buskets.Include(b => b.Client).Include(b => b.Product);
             var productInBusketList = howrashokShopContext.Where(c => c.Client.Email == login).ToList();
-            List<Product> products = new List<Product>();
             foreach (var item in productInBusketList)
             {
-                var product = item.Product;
-                product.Costs = _context.Costs.Where(c => c.ProductId == product.Id).ToList();
-                product.Photos = _context.Photos.Where(c => c.ProductId == product.Id).ToList();
-                products.Add(product);
+                item.Product.Category = _context.Categories.FirstOrDefault(c => c.Id == item.Product.CategoryId);
+                item.Product.Costs = _context.Costs.Where(c => c.ProductId == item.Product.Id).ToList();
+                item.Product.Photos = _context.Photos.Where(c => c.ProductId == item.Product.Id).ToList();
             }
-            return View(products);
+            return View(productInBusketList);
         }
 
         // GET: Buskets/Details/5
@@ -135,43 +133,23 @@ namespace HowrashokShop.Controllers
             return View(busket);
         }
 
-        // GET: Buskets/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.Buskets == null)
-            {
-                return NotFound();
-            }
-
-            var busket = await _context.Buskets
-                .Include(b => b.Client)
-                .Include(b => b.Product)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (busket == null)
-            {
-                return NotFound();
-            }
-
-            return View(busket);
-        }
-
         // POST: Buskets/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public async Task<IActionResult> DeleteConfirmed(int id, int user)
         {
-            if (_context.Buskets == null)
+            using(var context = new HowrashokShopContext())
             {
-                return Problem("Entity set 'HowrashokShopContext.Buskets'  is null.");
+                var basket = await context.Buskets.FirstOrDefaultAsync(c => c.Id == id);
+                if (basket != null)
+                {
+                    context.Buskets.Remove(basket);
+                    await context.SaveChangesAsync();
+                }
+                _context = new HowrashokShopContext();
+                var client = context.Clients.FirstOrDefault(c => c.Id == user);
+                return RedirectToAction("Index", new { login = client.Email });
             }
-            var busket = await _context.Buskets.FindAsync(id);
-            if (busket != null)
-            {
-                _context.Buskets.Remove(busket);
-            }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
 
         private bool BusketExists(int id)

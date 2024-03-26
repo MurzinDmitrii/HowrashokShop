@@ -205,6 +205,7 @@ namespace HowrashokShop.Controllers
             var cookieValue = HttpContext.Request.Cookies["userlogin"];
             int clientId = _context.Clients.FirstOrDefault(c => c.Email == user).Id;
             _context.Buskets.Add(new Busket() { ProductId = id, ClientId = clientId});
+            _context.SaveChanges();
             return Redirect("~/Index");
         }
 
