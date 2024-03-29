@@ -5,7 +5,7 @@ namespace HowrashokShop.Models;
 
 public partial class AdminPassword
 {
-    public string Id { get; set; } = null!;
+    public int Id { get; set; }
 
     public byte[] Password { get; set; } = null!;
 

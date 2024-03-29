@@ -12,6 +12,18 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 <div class="content">
+    <div class="centre">
+        <form method="post">
+            <button id="OrderButton" type="submit" style="width: 150%;
+                                         height: 4%;
+                                         margin-left: -25%;
+                                         font-size: 16px; padding: 10%" asp-action="Delete" asp- asp-controller="Buskets">
+                Оформить
+            </button>
+            <link rel="stylesheet" href="~/css/ButtonStyle.css" />
+            <link rel="stylesheet" href="~/css/Centre.css" />
+        </form>
+    </div>
     <div class="row mt-2 mb-5 margin_row">
         @foreach (var item in Model)
         {

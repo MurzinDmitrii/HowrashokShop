@@ -32,4 +32,6 @@ public partial class Product
     public virtual ICollection<TablePart> TableParts { get; set; } = new List<TablePart>();
 
     public virtual Theme Theme { get; set; } = null!;
+
+    public virtual ICollection<Material> Materials { get; set; } = new List<Material>();
 }

@@ -73,6 +73,7 @@ Create table [Order]
 	[DateOrder] Datetime NOT NULL,
 	[ClientID] Integer NOT NULL,
 	[Completed] Bit NOT NULL,
+	[Address] nvarchar(1000),
 Primary Key ([ID],[DateOrder])
 ) 
 go
