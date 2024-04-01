@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HowrashokShop.Models;
+using Microsoft.Extensions.Hosting;
 
 namespace HowrashokShop.Controllers
 {
@@ -45,9 +46,11 @@ namespace HowrashokShop.Controllers
         }
 
         // GET: Orders/Create
-        public IActionResult Create()
+        public IActionResult Create(string login)
         {
-            ViewData["ClientId"] = new SelectList(_context.Clients, "Id", "Email");
+            ViewData["DateOrder"] = DateTime.Now;
+            Client client = _context.Clients.FirstOrDefault(c => c.Email == login);
+            ViewData["Client"] = client.Id;
             return View();
         }
 
@@ -58,13 +61,18 @@ namespace HowrashokShop.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,DateOrder,ClientId,Completed,Address")] Order order)
         {
-            if (ModelState.IsValid)
+            order.DateOrder = DateTime.Now;
+            order.Client = _context.Clients.FirstOrDefault(c => c.Id == order.ClientId);
+            order.Completed = false;
+            ModelState.ClearValidationState(nameof(Order));
+            var a = TryValidateModel(order, nameof(Order));
+            var b = ModelState.IsValid;
+            if (TryValidateModel(order, nameof(Order)))
             {
                 _context.Add(order);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ClientId"] = new SelectList(_context.Clients, "Id", "Email", order.ClientId);
             return View(order);
         }
 

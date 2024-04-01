@@ -1541,3 +1541,42 @@ Path: /favicon.ico  Time:0:29:55
 Path: /favicon.ico  Time:0:30:40
 Path: /favicon.ico  Time:0:30:54
 Path: /favicon.ico  Time:0:30:54
+Path: /favicon.ico  Time:0:19:20
+Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+Path: /favicon.ico  Time:0:19:29
+Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+Path: /favicon.ico  Time:0:19:35
+Path: /favicon.ico  Time:0:27:40
+Path: /favicon.ico  Time:0:28:06
+Path: /favicon.ico  Time:0:29:36
+Path: /favicon.ico  Time:0:29:43
+Path: /favicon.ico  Time:0:29:49
+Path: /favicon.ico  Time:0:30:28
+Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+Path: /favicon.ico  Time:0:30:33
+Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+Path: /favicon.ico  Time:0:30:35
+Path: /favicon.ico  Time:0:30:40
+Path: /favicon.ico  Time:0:30:43
+Path: /favicon.ico  Time:0:31:32
+Path: /favicon.ico  Time:0:31:59
+Path: /favicon.ico  Time:0:32:04
+Path: /favicon.ico  Time:0:32:53
+Path: /favicon.ico  Time:0:35:29
+Path: /favicon.ico  Time:0:35:32
+Path: /favicon.ico  Time:0:35:34
+Path: /favicon.ico  Time:0:35:40
+Overriding address(es) 'http://localhost:5136'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+Path: /favicon.ico  Time:19:39:47
+Path: /favicon.ico  Time:19:39:52
+Path: /favicon.ico  Time:19:42:03
+Path: /favicon.ico  Time:19:42:07
+Path: /favicon.ico  Time:19:42:12
+Path: /favicon.ico  Time:19:42:26
+Path: /favicon.ico  Time:19:43:01
+Path: /favicon.ico  Time:19:46:41
+Path: /favicon.ico  Time:19:46:49
+Path: /favicon.ico  Time:19:48:12
+Path: /favicon.ico  Time:19:48:29
+Path: /favicon.ico  Time:19:49:34
+Path: /favicon.ico  Time:19:49:37
