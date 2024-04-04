@@ -5,14 +5,26 @@
 @{
     Layout = "_Layout";
 }
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<div class="content centre">
+    <h3 class="mainfont">Спасибо за заказ! Пожалуйста, выберите форму оплаты</h3>
 
-<form method="POST" action="https://yoomoney.ru/quickpay/confirm">
-    <input type="hidden" name="receiver" value="4100110855145376" /> <!--Если Вы нашли это на моем гите - можете задонатить :)-->
-    <input type="hidden" name="label" value="@ViewData["OrderId"]" />
-    <input type="hidden" name="quickpay-form" value="button" />
-    <h3>@ViewData["Cost"]</h3>
-    <input type="hidden" name="sum" value="@ViewData["Cost"]" data-type="number" />
-    <label><input type="radio" name="paymentType" value="PC" />ЮMoney</label>
-    <label><input type="radio" name="paymentType" value="AC" />Банковской картой</label>
-    <input type="submit" value="Перевести" />
-</form>
+    <form method="POST" action="https://yoomoney.ru/quickpay/confirm">
+        <input type="hidden" name="receiver" value="4100110855145376" /> <!--Если Вы нашли это на моем гите - можете задонатить :)-->
+        <input type="hidden" name="label" value="@ViewData["OrderId"]" />
+        <input type="hidden" name="quickpay-form" value="button" />
+        <input type="hidden" name="sum" value="@ViewData["Cost"]" data-type="number" />
+        <label style="outline: none;color: #5893B9;font-family: 'Ubuntu Condensed', sans-serif;">
+            <input type="radio" name="paymentType" value="PC" class="dopfont" />ЮMoney 
+        </label>
+        <label style ="outline: none;color: #5893B9;font-family: 'Ubuntu Condensed', sans-serif;">
+            <input type="radio" name="paymentType" value="AC" class="dopfont" />Банковской картой
+        </label>
+        <button type="submit" style="height: 40px;">Перевести</button>
+        <link rel="stylesheet" href="~/css/ButtonStyle.css" />
+        <link rel="stylesheet" href="~/css/Centre.css" />
+        <link rel="stylesheet" href="~/css/AuthForm.css" />
+    </form>
+</div>
+

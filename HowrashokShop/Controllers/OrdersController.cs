@@ -65,15 +65,28 @@ namespace HowrashokShop.Controllers
             order.Client = _context.Clients.FirstOrDefault(c => c.Id == order.ClientId);
             order.Completed = false;
             ModelState.ClearValidationState(nameof(Order));
-            var a = TryValidateModel(order, nameof(Order));
-            var b = ModelState.IsValid;
-            if (TryValidateModel(order, nameof(Order)))
+            _context.Add(order);
+            await _context.SaveChangesAsync();
+            double cost = 0.0;
+            var list = _context.Buskets.Where(c => c.Client == order.Client).ToList();
+            foreach (var item in list)
             {
-                _context.Add(order);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                var product = _context.Products.FirstOrDefault(c => c.Id == item.ProductId);
+                cost += Convert.ToDouble(_context.Costs.Where(c => c.ProductId == product.Id).OrderByDescending(c => c.Size).First().Size);
+                TablePart part = new TablePart();
+                part.ProductId = item.ProductId;
+                part.Quantity = 1;
+                part.OrderId = order.Id;
+                part.DateOrder = order.DateOrder;
+                using(HowrashokShopContext context = new())
+                {
+                    context.TableParts.Add(part);
+                    context.Buskets.Remove(item);
+                    await context.SaveChangesAsync();
+                }
             }
-            return View(order);
+
+            return Redirect("~/Pay?order="+order.Id+"&cost="+cost);
         }
 
         // GET: Orders/Edit/5
