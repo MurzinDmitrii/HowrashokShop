@@ -20,10 +20,13 @@ namespace HowrashokShop.Controllers
         }
 
         // GET: Orders
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string email)
         {
-            var howrashokShopContext = _context.Orders.Include(o => o.Client);
-            return View(await howrashokShopContext.ToListAsync());
+            var howrashokShopContext = _context.Orders;
+            var client = _context.Clients.FirstOrDefault(c => c.Email== email);
+            var list = howrashokShopContext.ToList();
+            list = list.Where(c => c.ClientId == client.Id).ToList();
+            return View(list);
         }
 
         // GET: Orders/Details/5
@@ -64,6 +67,7 @@ namespace HowrashokShop.Controllers
             order.DateOrder = DateTime.Now;
             order.Client = _context.Clients.FirstOrDefault(c => c.Id == order.ClientId);
             order.Completed = false;
+            if (order.Address == null) order.Address = "";
             ModelState.ClearValidationState(nameof(Order));
             _context.Add(order);
             await _context.SaveChangesAsync();
@@ -72,6 +76,7 @@ namespace HowrashokShop.Controllers
             foreach (var item in list)
             {
                 var product = _context.Products.FirstOrDefault(c => c.Id == item.ProductId);
+                product.Arhived = true;
                 cost += Convert.ToDouble(_context.Costs.Where(c => c.ProductId == product.Id).OrderByDescending(c => c.Size).First().Size);
                 TablePart part = new TablePart();
                 part.ProductId = item.ProductId;
@@ -80,6 +85,7 @@ namespace HowrashokShop.Controllers
                 part.DateOrder = order.DateOrder;
                 using(HowrashokShopContext context = new())
                 {
+                    context.Products.Update(product);
                     context.TableParts.Add(part);
                     context.Buskets.Remove(item);
                     await context.SaveChangesAsync();

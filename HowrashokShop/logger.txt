@@ -1895,3 +1895,302 @@ Path: /favicon.ico  Time:0:20:12
 Path: /favicon.ico  Time:0:20:22
 Path: /favicon.ico  Time:0:20:28
 Path: /favicon.ico  Time:0:20:28
+Path: /favicon.ico  Time:22:57:25
+Path: /favicon.ico  Time:22:57:29
+Path: /favicon.ico  Time:22:57:30
+Path: /favicon.ico  Time:22:57:31
+Path: /favicon.ico  Time:22:57:33
+Path: /favicon.ico  Time:22:57:34
+Path: /favicon.ico  Time:22:57:35
+Path: /favicon.ico  Time:22:57:35
+Path: /favicon.ico  Time:22:57:36
+Path: /favicon.ico  Time:22:57:37
+Path: /favicon.ico  Time:22:57:40
+Path: /favicon.ico  Time:22:57:43
+Path: /favicon.ico  Time:22:57:44
+Path: /favicon.ico  Time:22:57:44
+Path: /favicon.ico  Time:22:57:45
+Path: /favicon.ico  Time:22:57:45
+Path: /favicon.ico  Time:22:57:50
+Path: /favicon.ico  Time:22:57:50
+Path: /favicon.ico  Time:22:57:51
+Path: /favicon.ico  Time:22:57:52
+Path: /favicon.ico  Time:22:57:53
+Path: /favicon.ico  Time:22:57:53
+Path: /favicon.ico  Time:23:01:51
+Path: /favicon.ico  Time:23:01:52
+Path: /favicon.ico  Time:23:01:52
+An exception occurred while iterating over the results of a query for context type 'HowrashokShop.Models.HowrashokShopContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method337(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:23:01:56
+Path: /favicon.ico  Time:23:02:25
+Path: /favicon.ico  Time:23:02:26
+Path: /favicon.ico  Time:23:02:26
+Path: /favicon.ico  Time:23:03:03
+Path: /favicon.ico  Time:23:03:04
+Path: /favicon.ico  Time:23:03:05
+An exception occurred while iterating over the results of a query for context type 'HowrashokShop.Models.HowrashokShopContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method339(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:23:03:06
+Path: /favicon.ico  Time:23:03:19
+An exception occurred while iterating over the results of a query for context type 'HowrashokShop.Models.HowrashokShopContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method339(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:23:03:31
+Path: /favicon.ico  Time:23:03:34
+Path: /favicon.ico  Time:23:04:33
+Path: /favicon.ico  Time:23:06:16
+Path: /favicon.ico  Time:23:06:17
+An exception occurred while iterating over the results of a query for context type 'HowrashokShop.Models.HowrashokShopContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method339(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:23:06:18
+Path: /favicon.ico  Time:23:06:26
+An exception occurred while iterating over the results of a query for context type 'HowrashokShop.Models.HowrashokShopContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method339(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:23:06:37
+Path: /favicon.ico  Time:23:08:15
+Path: /favicon.ico  Time:23:08:32
+Path: /favicon.ico  Time:23:08:32
+An exception occurred while iterating over the results of a query for context type 'HowrashokShop.Models.HowrashokShopContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method343(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+An unhandled exception has occurred while executing the request.
+Path: /favicon.ico  Time:23:08:43
+Path: /favicon.ico  Time:23:14:35
+Path: /favicon.ico  Time:23:14:36
+Path: /favicon.ico  Time:23:14:37
+Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+Path: /favicon.ico  Time:23:14:38
+Path: /favicon.ico  Time:23:58:34
+Path: /favicon.ico  Time:23:58:36
+Path: /favicon.ico  Time:23:58:37
+Path: /favicon.ico  Time:23:58:39
+Path: /favicon.ico  Time:23:58:39
+Path: /favicon.ico  Time:23:58:41
+Path: /favicon.ico  Time:23:58:43
+Path: /favicon.ico  Time:23:58:43
+Path: /favicon.ico  Time:23:58:44
+Path: /favicon.ico  Time:23:58:46
+Path: /favicon.ico  Time:23:58:48
+Path: /favicon.ico  Time:23:58:48
+Path: /favicon.ico  Time:23:58:49
+Path: /favicon.ico  Time:23:58:50
+Path: /favicon.ico  Time:23:59:01
+Path: /favicon.ico  Time:23:59:03
+Path: /favicon.ico  Time:23:59:05
+Path: /favicon.ico  Time:0:01:19
+Path: /favicon.ico  Time:0:01:23
+Path: /favicon.ico  Time:0:01:23
+Path: /favicon.ico  Time:0:01:24
+Path: /favicon.ico  Time:0:01:31
+Path: /favicon.ico  Time:0:01:33
+Path: /favicon.ico  Time:0:03:08
+Path: /favicon.ico  Time:0:03:09
+Path: /favicon.ico  Time:0:03:09
+Path: /favicon.ico  Time:0:03:11
+Path: /favicon.ico  Time:0:03:31
+Path: /favicon.ico  Time:0:03:32
+Path: /favicon.ico  Time:0:03:32
+Path: /favicon.ico  Time:0:03:33
+Path: /favicon.ico  Time:0:05:53
+Path: /favicon.ico  Time:0:05:54
+Path: /favicon.ico  Time:0:05:54
+Path: /favicon.ico  Time:0:05:55
+Path: /favicon.ico  Time:0:08:06
+Path: /favicon.ico  Time:0:08:10
+Path: /favicon.ico  Time:0:08:10
+Path: /favicon.ico  Time:0:08:11
+Path: /favicon.ico  Time:0:08:43
+Path: /favicon.ico  Time:0:08:48
+Path: /favicon.ico  Time:0:08:48
+Path: /favicon.ico  Time:0:08:49
+Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+Path: /favicon.ico  Time:0:09:09
+Path: /favicon.ico  Time:0:09:12
+Path: /favicon.ico  Time:0:10:06
+Path: /favicon.ico  Time:0:10:07
+Path: /favicon.ico  Time:0:10:08
+Path: /favicon.ico  Time:0:10:08
+Path: /favicon.ico  Time:0:11:39
+Path: /favicon.ico  Time:0:11:40
+Path: /favicon.ico  Time:0:11:41
+Path: /favicon.ico  Time:0:11:41
+Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+Path: /favicon.ico  Time:0:11:49
+Path: /favicon.ico  Time:0:11:51
+Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+Path: /favicon.ico  Time:0:11:53
+Path: /favicon.ico  Time:0:11:54
+Path: /favicon.ico  Time:0:12:15
+Path: /favicon.ico  Time:0:12:16
+Path: /favicon.ico  Time:0:12:17
+Path: /favicon.ico  Time:0:12:18
+Path: /favicon.ico  Time:0:13:13
+Path: /favicon.ico  Time:0:13:14
+Path: /favicon.ico  Time:0:13:15
+Path: /favicon.ico  Time:0:13:15
+Path: /favicon.ico  Time:0:14:51
+Path: /favicon.ico  Time:0:14:52
+Path: /favicon.ico  Time:0:14:53
+Path: /favicon.ico  Time:0:14:54
+Path: /favicon.ico  Time:0:16:02
+Path: /favicon.ico  Time:0:16:03
+Path: /favicon.ico  Time:0:16:03
+Path: /favicon.ico  Time:0:16:04
+Path: /favicon.ico  Time:0:16:54
+Path: /favicon.ico  Time:0:16:56
+Path: /favicon.ico  Time:0:16:57
+Path: /favicon.ico  Time:0:18:09
+Path: /favicon.ico  Time:0:18:10
+Path: /favicon.ico  Time:0:18:11
+Path: /favicon.ico  Time:0:18:12
+Path: /favicon.ico  Time:0:18:39
+Path: /favicon.ico  Time:0:18:54
+Path: /favicon.ico  Time:0:18:55
+Path: /favicon.ico  Time:0:18:55
+Path: /favicon.ico  Time:0:19:19
+Path: /favicon.ico  Time:0:19:20
+Path: /favicon.ico  Time:0:19:21
+Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+Path: /favicon.ico  Time:0:19:21
+Path: /favicon.ico  Time:0:19:34
+Path: /favicon.ico  Time:0:19:35
+Path: /favicon.ico  Time:0:19:35
+Path: /favicon.ico  Time:0:19:36
+Path: /favicon.ico  Time:0:20:09
+Path: /favicon.ico  Time:0:20:10
+Path: /favicon.ico  Time:0:20:10
+Path: /favicon.ico  Time:0:20:11
+Path: /favicon.ico  Time:0:20:33
+Path: /favicon.ico  Time:0:20:34
+Path: /favicon.ico  Time:0:20:35
+Path: /favicon.ico  Time:0:20:35
+Path: /favicon.ico  Time:0:20:55
+Path: /favicon.ico  Time:0:20:56
+Path: /favicon.ico  Time:0:20:56
+Path: /favicon.ico  Time:0:20:57
+Path: /favicon.ico  Time:0:21:44
+Path: /favicon.ico  Time:0:22:07
+Path: /favicon.ico  Time:0:22:22
+Path: /favicon.ico  Time:0:22:23
+Path: /favicon.ico  Time:0:22:24
+Path: /favicon.ico  Time:0:22:24
+Path: /favicon.ico  Time:0:23:17
+Path: /favicon.ico  Time:0:23:18
+Path: /favicon.ico  Time:0:23:18
+Path: /favicon.ico  Time:0:23:19
+Path: /favicon.ico  Time:0:23:56
+Path: /favicon.ico  Time:0:23:57
+Path: /favicon.ico  Time:0:23:58
+Path: /favicon.ico  Time:0:23:58
+Path: /favicon.ico  Time:0:25:00
+Path: /favicon.ico  Time:0:25:01
+Path: /favicon.ico  Time:0:25:01
+Path: /favicon.ico  Time:0:25:02
+Path: /favicon.ico  Time:0:25:18
+Path: /favicon.ico  Time:0:25:19
+Path: /favicon.ico  Time:0:25:20
+Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+Path: /favicon.ico  Time:0:25:21
+Path: /favicon.ico  Time:0:25:40
+Path: /favicon.ico  Time:0:25:42
+Path: /favicon.ico  Time:0:25:43
+Path: /favicon.ico  Time:0:25:43
+Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+Path: /favicon.ico  Time:0:25:44
+Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+Path: /favicon.ico  Time:0:25:45
+Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+Path: /favicon.ico  Time:0:25:46
+Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+Path: /favicon.ico  Time:0:25:47
+Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+Path: /favicon.ico  Time:0:25:49
+Path: /favicon.ico  Time:0:26:00
+Path: /favicon.ico  Time:0:26:02
+Path: /favicon.ico  Time:0:26:02
+Path: /favicon.ico  Time:0:26:04
+Path: /favicon.ico  Time:0:26:06
+Path: /favicon.ico  Time:0:26:08
+Path: /favicon.ico  Time:0:27:37
+Path: /favicon.ico  Time:0:27:38
+Path: /favicon.ico  Time:0:27:38
+Path: /favicon.ico  Time:0:27:39
+Path: /favicon.ico  Time:0:28:16
+Path: /favicon.ico  Time:0:28:18
+Path: /favicon.ico  Time:0:28:18
+Path: /favicon.ico  Time:0:28:19
+Path: /favicon.ico  Time:0:56:24
+Path: /favicon.ico  Time:0:56:26
+Path: /favicon.ico  Time:0:56:26
+Path: /favicon.ico  Time:0:56:27
+Path: /favicon.ico  Time:0:57:04
+Path: /favicon.ico  Time:0:57:05
+Path: /favicon.ico  Time:0:57:05
+Path: /favicon.ico  Time:0:57:06
+Path: /favicon.ico  Time:0:57:44
+Path: /favicon.ico  Time:0:57:49
+Path: /favicon.ico  Time:0:57:49
+Path: /favicon.ico  Time:0:57:50
+Path: /favicon.ico  Time:0:59:19
+Path: /favicon.ico  Time:0:59:29
+Path: /favicon.ico  Time:0:59:32
+Path: /favicon.ico  Time:0:59:41
+Path: /favicon.ico  Time:0:59:44
+Path: /favicon.ico  Time:1:00:02
+Path: /favicon.ico  Time:1:00:03
+Path: /favicon.ico  Time:1:00:03
+Path: /favicon.ico  Time:1:00:04
+Path: /favicon.ico  Time:1:00:17
+Path: /favicon.ico  Time:1:00:28
+Path: /favicon.ico  Time:1:00:48
+Path: /favicon.ico  Time:1:00:58
+Path: /favicon.ico  Time:1:00:59
+Path: /favicon.ico  Time:1:00:59
+Path: /favicon.ico  Time:1:01:00
+Path: /favicon.ico  Time:1:01:24
+Path: /favicon.ico  Time:1:01:24
+Path: /favicon.ico  Time:1:01:25
+Path: /favicon.ico  Time:1:01:50
+Path: /favicon.ico  Time:1:01:51
+Path: /favicon.ico  Time:1:01:51
+Path: /favicon.ico  Time:1:01:52
+Path: /favicon.ico  Time:1:02:39
+Path: /favicon.ico  Time:1:02:40
+Path: /favicon.ico  Time:1:02:41
+Path: /favicon.ico  Time:1:02:42
+Path: /favicon.ico  Time:1:03:12
+Path: /favicon.ico  Time:1:03:17
+Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+Path: /favicon.ico  Time:1:04:16
