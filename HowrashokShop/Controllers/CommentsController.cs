@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HowrashokShop.Models;
+using Microsoft.Extensions.Hosting;
 
 namespace HowrashokShop.Controllers
 {
@@ -46,11 +47,31 @@ namespace HowrashokShop.Controllers
         }
 
         // GET: Comments/Create
-        public IActionResult Create()
+        public IActionResult Create(int id)
         {
-            ViewData["ClientId"] = new SelectList(_context.Clients, "Id", "Id");
-            ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Id");
+            var tablePart = _context.TableParts.FirstOrDefault(m => m.Id == id);
+            tablePart.Product = _context.Products.FirstOrDefault(c => c.Id == tablePart.ProductId);
+            Comment comment = _context.Comments.FirstOrDefault(c => c.ProductId == tablePart.ProductId);
+            tablePart.Order = _context.Orders.FirstOrDefault(c => c.Id == tablePart.OrderId);
+            comment.Client = _context.Clients.FirstOrDefault(c => c.Id == comment.ClientId);
+            if (tablePart.Order.Completed == false) return Redirect("~/Orders?email=" + comment.Client.Email);
+            if (comment != null) return Redirect("~/Orders?email=" + comment.Client.Email);
+            ViewData["Product"] = tablePart.ProductId;
             return View();
+        }
+
+        public async Task<IActionResult> Created(string user, int id, string comment1, int mark)
+        {
+            Comment comment = new();
+            comment.Product = _context.Products.FirstOrDefault(c => c.Id == id);
+            comment.Client = _context.Clients.FirstOrDefault(c => c.Email == user);
+            comment.ClientId = comment.Client.Id;
+            comment.ProductId = comment.Product.Id;
+            comment.Comment1 = comment1 ?? "";
+            comment.Mark = mark;
+            _context.Add(comment);
+            await _context.SaveChangesAsync();
+            return Redirect("~/Orders/Index?email" + comment.Client.Email);
         }
 
         // POST: Comments/Create
@@ -58,17 +79,16 @@ namespace HowrashokShop.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ClientId,ProductId,Comment1")] Comment comment)
+        public async Task<IActionResult> Create(string user, int id, string comment1, int mark)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(comment);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["ClientId"] = new SelectList(_context.Clients, "Id", "Id", comment.ClientId);
-            ViewData["ProductId"] = new SelectList(_context.Products, "Id", "Id", comment.ProductId);
-            return View(comment);
+            Comment comment = new();
+            comment.Product = _context.Products.FirstOrDefault(c => c.Id == id);
+            comment.Client = _context.Clients.FirstOrDefault(c => c.Email == user);
+            comment.Comment1 = comment1??"";
+            comment.Mark = mark;
+            _context.Add(comment);
+            await _context.SaveChangesAsync();
+            return Redirect("~/Orders/Index?email" + comment.Client.Email);
         }
 
         // GET: Comments/Edit/5

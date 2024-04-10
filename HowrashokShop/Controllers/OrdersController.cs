@@ -39,7 +39,16 @@ namespace HowrashokShop.Controllers
 
             var order = await _context.Orders
                 .Include(o => o.Client)
+                .Include(c => c.TableParts)
                 .FirstOrDefaultAsync(m => m.Id == id);
+            foreach(var item in order.TableParts)
+            {
+                var product = _context.Products.FirstOrDefault(c => c.Id == item.ProductId);
+                product.Photos = _context.Photos.Where(c => c.ProductId == item.ProductId).ToList();
+                product.Costs = _context.Costs.Where(c => c.ProductId == item.ProductId).ToList();
+                product.Category = _context.Categories.FirstOrDefault(c => c.Id == product.CategoryId);
+                item.Product = product;
+            }
             if (order == null)
             {
                 return NotFound();

@@ -3,36 +3,77 @@
 @{
     ViewData["Title"] = "Create";
 }
+@{
+    Layout = "_Layout";
+}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-<h1>Create</h1>
-
-<h4>Comment</h4>
+<link href="~/css/Index.css?1" rel="stylesheet" />
 <hr />
-<div class="row">
+<div class="row content centre">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="ClientId" class="control-label"></label>
-                <select asp-for="ClientId" class ="form-control" asp-items="ViewBag.ClientId"></select>
+            <h1 class="dopfont">
+                Отзыв на товар Арт.@ViewBag.Product
+            </h1>
+            <div class="inline_class">
+                <div class="radio-form">
+                    <label class="radio-control">
+                        <input type="radio" name="money" value="one" id="one"/>
+                        <span class="radio-input">
+                            <img src="~/Images/star.png" />
+                            <span class="dopfont">Одна</span>
+                        </span>
+                    </label>
+                    <label class="radio-control">
+                        <input type="radio" name="money" value="two" id="two"/>
+                        <span class="radio-input">
+                            <img src="~/Images/star.png" />
+                            <span class="dopfont">Две</span>
+                        </span>
+                    </label>
+                    <label class="radio-control">
+                        <input type="radio" name="money" value="three" id="three"/>
+                        <span class="radio-input">
+                            <img src="~/Images/star.png" />
+                            <span class="dopfont">Три</span>
+                        </span>
+                    </label>
+                    <label class="radio-control">
+                        <input type="radio" name="money" value="four" id="four"/>
+                        <span class="radio-input">
+                            <img src="~/Images/star.png" />
+                            <span class="dopfont">Четыре</span>
+                        </span>
+                    </label>
+                    <label class="radio-control">
+                        <input type="radio" name="money" value="five" checked="checked" id="five"/>
+                        <span class="radio-input">
+                            <img src="~/Images/star.png" />
+                            <span class="dopfont">Пять</span>
+                        </span>
+                    </label>
+                </div>
+                <link rel="stylesheet" href="~/css/Star.css"/>
             </div>
             <div class="form-group">
-                <label asp-for="ProductId" class="control-label"></label>
-                <select asp-for="ProductId" class ="form-control" asp-items="ViewBag.ProductId"></select>
-            </div>
-            <div class="form-group">
-                <label asp-for="Comment1" class="control-label"></label>
-                <input asp-for="Comment1" class="form-control" />
+                <input asp-for="ProductId" type="hidden" value="@ViewBag.Product" id="ProductBox" />
                 <span asp-validation-for="Comment1" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <label asp-for="Comment1" class="control-label dopfont">Мы будем рады Вашему мнению!</label>
+                <input asp-for="Comment1" class="form-control" id="CommentBox"/>
+                <span asp-validation-for="Comment1" class="text-danger"></span>
             </div>
+            
+            <div class="form-group">
+                <button id="commentButton" type="submit" class="btn btn-primary">Сохранить</button>
+                <link href="~/css/ButtonStyle.css" rel="stylesheet" />
+            </div>
+            <script src="~/js/addComment.js?1"></script>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 

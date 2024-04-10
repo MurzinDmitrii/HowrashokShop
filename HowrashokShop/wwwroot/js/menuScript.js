@@ -16,21 +16,30 @@ window.onload = function () {
         document.getElementById('menu').children[2].children[0].classList.add("current");
     }
     if (currentLocation == "/Auth") {
-        document.getElementById('menu').children[3].children[0].classList.add("current");
+        document.getElementById('menu').children[2].children[0].classList.add("current");
     }
     if (currentLocation == "/Profile/Edit") {
-        document.getElementById('menu').children[3].children[0].classList.add("current");
+        document.getElementById('menu').children[2].children[0].classList.add("current");
     }
     if (currentLocation == "/Profile/Create") {
-        document.getElementById('menu').children[3].children[0].classList.add("current");
+        document.getElementById('menu').children[2].children[0].classList.add("current");
     }
     if (currentLocation == "/Orders/Create") {
-        document.getElementById('menu').children[3].children[0].classList.add("current");
+        document.getElementById('menu').children[2].children[0].classList.add("current");
     }
     if (currentLocation == "/Pay") {
-        document.getElementById('menu').children[3].children[0].classList.add("current");
+        document.getElementById('menu').children[2].children[0].classList.add("current");
     }
     if (currentLocation == "/Buskets") {
-        document.getElementById('menu').children[3].children[0].classList.add("current");
+        document.getElementById('menu').children[2].children[0].classList.add("current");
+    }
+    if (currentLocation == "/Comments/Create") {
+        document.getElementById('menu').children[2].children[0].classList.add("current");
+    }
+    if (currentLocation == "/Orders/Details") {
+        document.getElementById('menu').children[2].children[0].classList.add("current");
+    }
+    if (currentLocation == "/Orders") {
+        document.getElementById('menu').children[2].children[0].classList.add("current");
     }
 }

@@ -1,0 +1,110 @@
+﻿.radio-form {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+    .radio-form .radio-control {
+        width: 180px;
+        transition: all ease 250ms;
+    }
+
+        .radio-form .radio-control input {
+            display: none;
+        }
+
+        .radio-form .radio-control .radio-input {
+            background: #ffffff;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 0 10px;
+            position: relative;
+            transition: all ease 250ms;
+            border: 4px solid #BFE2FF;
+            display: block;
+        }
+
+        .radio-form .radio-control:hover .radio-input {
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        .radio-form .radio-control .radio-input i {
+            display: block;
+            font-size: 70px;
+            color: #BFE2FF;
+            font-weight: bold;
+        }
+
+        .radio-form .radio-control .radio-input img {
+            width: 70px;
+        }
+
+        .radio-form .radio-control .radio-input span {
+            font-family: Tahoma, sans-serif;
+            letter-spacing: 1px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: block;
+            margin-top: 16px;
+            color: #AAA;
+        }
+
+        .radio-form .radio-control input:checked + .radio-input span {
+            color: #444444;
+            opacity: 1;
+            transition: opacity ease 250ms;
+        }
+
+        .radio-form .radio-control input:checked + .radio-input:after {
+            top: 0;
+            right: 20px;
+            transform: translateY(-50%);
+            animation-name: animation;
+            animation-duration: 250ms;
+            background-color: #FFF;
+            font-size: 25px;
+            display: block;
+            position: absolute;
+            border: 5px solid #FFF;
+            padding-left: 2px;
+            content: "\f058";
+            font-family: "FontAwesome";
+            font-weight: bold;
+        }
+
+        .radio-form .radio-control input:checked + .radio-input {
+            border: 4px solid #337AB7;
+        }
+
+            .radio-form .radio-control input:checked + .radio-input:after,
+            .radio-form .radio-control input:checked + .radio-input i {
+                color: #337AB7;
+            }
+
+@keyframes animation {
+    0% {
+        transform: translateY(-50%) scale(0);
+    }
+
+    75% {
+        transform: translateY(-50%) scale(1.3);
+    }
+
+    100% {
+        transform: translateY(-50%) scale(1);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .radio-form {
+        display: block;
+    }
+
+        .radio-form .radio-control {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+}
