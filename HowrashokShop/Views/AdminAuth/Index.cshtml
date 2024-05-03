@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+@{
+    Layout = "_Layout";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/css/AuthForm.css">
+
+<div class="content">
+    <div class="dopcontent">
+        <h1>Войти</h1>
+        @using (Html.BeginForm())
+        {
+            <div class="form-container">
+                @Html.TextBox("LoginBox", null, new { id = "login", placeholder = "Логин", @class = "form-input" })
+                @Html.Password("PasswordBox", null, new { id = "password", placeholder = "Пароль", @class = "form-input" })
+                <button type="submit" id="submitLogin" class="form-button">Войти</button>
+            </div>
+        }
+        @using (Html.BeginForm())
+        {
+            <div class="form-container">
+                <button asp-action="Create" asp-controller="Profile" id="newUser" class="form-button">Регистрация</button>
+            </div>
+        }
+    </div>
+</div>
+<script src="~/js/adminAuth.js?0"></script>
+
+
