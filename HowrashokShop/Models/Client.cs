@@ -23,8 +23,6 @@ public partial class Client
 
     public virtual ICollection<Busket> Buskets { get; set; } = new List<Busket>();
 
-    public virtual ICollection<Chat> Chats { get; set; } = new List<Chat>();
-
     public virtual ClientsPassword? ClientsPassword { get; set; }
 
     public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();

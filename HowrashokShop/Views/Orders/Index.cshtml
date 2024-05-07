@@ -20,14 +20,7 @@
             <a asp-controller="Orders" asp-action="Details" class="dopfont" asp-route-id="@item.Id">
                 <h1 class="dopfont">
                     Заказ №@Html.DisplayFor(modelItem => item.Id)
-                    @if (item.Completed)
-                    {
-                        <h1 class="dopfont">(выполнен)</h1>
-                    }
-                    else
-                    {
-                        <h1 class="dopfont">(в обработке)</h1>
-                    }
+                    <h1 class="dopfont">@Html.DisplayFor(modelItem => item.Status.Name)</h1>
                 </h1>
             </a>
         </div>

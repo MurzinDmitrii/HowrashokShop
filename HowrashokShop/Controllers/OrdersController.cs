@@ -26,6 +26,10 @@ namespace HowrashokShop.Controllers
             var client = _context.Clients.FirstOrDefault(c => c.Email== email);
             var list = howrashokShopContext.ToList();
             list = list.Where(c => c.ClientId == client.Id).ToList();
+            foreach(var item in list)
+            {
+                item.Status = _context.Statuses.FirstOrDefault(c => c.Id == item.StatusId);
+            }
             return View(list);
         }
 
@@ -75,7 +79,7 @@ namespace HowrashokShop.Controllers
         {
             order.DateOrder = DateTime.Now;
             order.Client = _context.Clients.FirstOrDefault(c => c.Id == order.ClientId);
-            order.Completed = false;
+            order.Status = _context.Statuses.FirstOrDefault(c => c.Id == 1);
             if (order.Address == null) order.Address = "";
             ModelState.ClearValidationState(nameof(Order));
             _context.Add(order);

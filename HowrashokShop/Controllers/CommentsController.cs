@@ -54,7 +54,7 @@ namespace HowrashokShop.Controllers
             Comment comment = _context.Comments.FirstOrDefault(c => c.ProductId == tablePart.ProductId);
             tablePart.Order = _context.Orders.FirstOrDefault(c => c.Id == tablePart.OrderId);
             comment.Client = _context.Clients.FirstOrDefault(c => c.Id == comment.ClientId);
-            if (tablePart.Order.Completed == false) return Redirect("~/Orders?email=" + comment.Client.Email);
+            if (tablePart.Order.StatusId != 4) return Redirect("~/Orders?email=" + comment.Client.Email);//тут исправить потом
             if (comment != null) return Redirect("~/Orders?email=" + comment.Client.Email);
             ViewData["Product"] = tablePart.ProductId;
             return View();
