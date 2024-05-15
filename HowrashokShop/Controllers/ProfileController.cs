@@ -18,30 +18,6 @@ namespace HowrashokShop.Controllers
             _context = context;
         }
 
-        // GET: Profile
-        public async Task<IActionResult> Index(string login)
-        {
-            return Redirect("~/Index");
-        }
-
-        // GET: Profile/Details/5
-        public async Task<IActionResult> Details(string? login)
-        {
-            if (login == null || _context.Clients == null)
-            {
-                return NotFound();
-            }
-
-            var client = await _context.Clients
-                .FirstOrDefaultAsync(m => m.Email == login);
-            if (client == null)
-            {
-                return NotFound();
-            }
-
-            return View(client);
-        }
-
         // GET: Profile/Create
         public IActionResult Create()
         {
@@ -141,43 +117,6 @@ namespace HowrashokShop.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(client);
-        }
-
-        // GET: Profile/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.Clients == null)
-            {
-                return NotFound();
-            }
-
-            var client = await _context.Clients
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (client == null)
-            {
-                return NotFound();
-            }
-
-            return View(client);
-        }
-
-        // POST: Profile/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            if (_context.Clients == null)
-            {
-                return Problem("Entity set 'HowrashokShopContext.Clients'  is null.");
-            }
-            var client = await _context.Clients.FindAsync(id);
-            if (client != null)
-            {
-                _context.Clients.Remove(client);
-            }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
 
         private bool ClientExists(int id)

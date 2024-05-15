@@ -30,7 +30,7 @@
         {
             @foreach (var item in Model)
             {
-                @if (item.Arhived == false)
+                @if (item.Arhived != true)
                 {
                     <div class="col-md-3 item">
                         <a asp-action="Details" asp-route-id="@item.Id">
