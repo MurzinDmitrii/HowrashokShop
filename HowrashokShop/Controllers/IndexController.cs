@@ -36,6 +36,7 @@ namespace HowrashokShop.Controllers
                 product.Theme = _context.Themes.FirstOrDefault(t => t.Id == product.ThemeId);
                 product.Costs = _context.Costs.Where(cost => cost.ProductId == product.Id).ToList();
                 product.Photos = _context.Photos.Where(photo => photo.ProductId == product.Id).ToList();
+                product.Discounts = _context.Discounts.Where(c => c.ProductId == product.Id).ToList();
             }
 
             if (!String.IsNullOrEmpty(searchString))

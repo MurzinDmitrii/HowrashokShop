@@ -38,7 +38,10 @@
                                 <img src="~/Images/@Html.DisplayFor(modelItem => item.Photos.OrderBy(c => c.Id).ToList()[0].Photopath)" class="img_item" width="100%" />
                                 <div class="main_in_item">
                                     <p class="mainfont">@Html.DisplayFor(modelItem => item.Category.Name)</p>
-                                    <p class="mainfont">@Html.DisplayFor(modelItem => item.Costs.OrderByDescending(c => c.DateOfSetting).ToList()[0].Size)</p>
+                                    <p class="mainfont">@Html.DisplayFor(modelItem => item.Cost)&#8381;</p>
+                                </div>
+                                <div class="main_in_item">
+                                    <p class="mainfont">@Html.DisplayFor(modelItem => item.Discount)</p>
                                 </div>
                                 <p class="dopfont">@Html.DisplayFor(modelItem => item.DescToShort)</p>
                             </div>

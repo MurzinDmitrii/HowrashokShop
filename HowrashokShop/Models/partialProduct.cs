@@ -24,5 +24,36 @@ namespace HowrashokShop.Models
                 return desc;
             }
         }
+        public string Discount
+        {
+            get
+            {
+                var disc = Discounts.OrderByDescending(c => c.DateOfSetting).FirstOrDefault();
+                if(disc != null)
+                {
+                    return $"Скидка {disc.Size}% до {disc.DateOfSetting.AddDays(disc.During).ToShortDateString()}";
+                }
+                else
+                {
+                    return "";
+                }
+            }
+        }
+
+        public string Cost
+        {
+            get
+            {
+                var disc = Discounts.OrderByDescending(c => c.DateOfSetting).FirstOrDefault();
+                if (disc != null)
+                {
+                    return Math.Round((Costs.OrderByDescending(c => c.DateOfSetting).ToList()[0].Size) * (100 - disc.Size) / 100,2).ToString();
+                }
+                else
+                {
+                    return Math.Round(Costs.OrderByDescending(c => c.DateOfSetting).ToList()[0].Size, 2).ToString();
+                }
+            }
+        }
     }
 }
