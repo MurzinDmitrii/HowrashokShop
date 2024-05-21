@@ -10,6 +10,7 @@ using System.Drawing;
 using Microsoft.Data.SqlClient;
 using Microsoft.AspNetCore.Http;
 using SimMetrics.Net.Metric;
+using Microsoft.CodeAnalysis;
 
 namespace HowrashokShop.Controllers
 {
@@ -65,6 +66,7 @@ namespace HowrashokShop.Controllers
             product.Theme = _context.Themes.FirstOrDefault(t => t.Id == product.ThemeId);
             product.Costs = _context.Costs.Where(cost => cost.ProductId == product.Id).ToList();
             product.Photos = _context.Photos.Where(photo => photo.ProductId == product.Id).ToList();
+            product.Materials = _context.Materials.Where(c => c.Ids.FirstOrDefault(c => c.Id == product.Id).Id == product.Id).ToList();
             if (product == null)
             {
                 return NotFound();
