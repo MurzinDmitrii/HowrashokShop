@@ -90,7 +90,7 @@ namespace HowrashokShop.Controllers
             {
                 var product = _context.Products.FirstOrDefault(c => c.Id == item.ProductId);
                 product.Arhived = true;
-                cost += Convert.ToDouble(_context.Costs.Where(c => c.ProductId == product.Id).OrderByDescending(c => c.Size).First().Size);
+                cost += Convert.ToDouble(item.Product.Cost);
                 TablePart part = new TablePart();
                 part.ProductId = item.ProductId;
                 part.Quantity = 1;

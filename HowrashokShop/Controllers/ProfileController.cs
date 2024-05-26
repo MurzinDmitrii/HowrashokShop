@@ -18,6 +18,11 @@ namespace HowrashokShop.Controllers
             _context = context;
         }
 
+        public async Task<IActionResult> Index(string login)
+        {
+            return Redirect("~/Index");
+        }
+
         // GET: Profile/Create
         public IActionResult Create()
         {

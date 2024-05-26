@@ -53,9 +53,14 @@ namespace HowrashokShop.Controllers
             tablePart.Product = _context.Products.FirstOrDefault(c => c.Id == tablePart.ProductId);
             tablePart.Order = _context.Orders.FirstOrDefault(c => c.Id == tablePart.OrderId);
             Comment comment = _context.Comments.FirstOrDefault(c => c.ProductId == tablePart.ProductId);
-
-            if (tablePart.Order.StatusId != 4) return Redirect("~/Orders?email=" + comment.Client.Email);//тут исправить потом
-            if (comment != null) return Redirect("~/Orders?email=" + comment.Client.Email);
+            var client = _context.Clients.FirstOrDefault(c => c.Id == tablePart.Order.ClientId);
+            if (tablePart.Order.StatusId != 4) return Redirect("~/Orders?email=" + client.Email);//тут исправить потом
+            
+            if (comment != null)
+            {
+                client = _context.Clients.FirstOrDefault(c => c.Id == comment.ClientId);
+                return Redirect("~/Orders?email=" + client.Email);
+            }
 
             tablePart.Order = _context.Orders.FirstOrDefault(c => c.Id == tablePart.OrderId);
             //comment.Client = _context.Clients.FirstOrDefault(c => c.Id == tablePart.Order.ClientId);
@@ -74,7 +79,8 @@ namespace HowrashokShop.Controllers
             comment.Mark = mark;
             _context.Add(comment);
             await _context.SaveChangesAsync();
-            return Redirect("~/Orders/Index?email" + comment.Client.Email);
+            var client = _context.Clients.FirstOrDefault(c => c.Id == comment.ClientId);
+            return Redirect("~/Orders/Index?email=" + client.Email);
         }
 
         // POST: Comments/Create

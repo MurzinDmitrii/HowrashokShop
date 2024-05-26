@@ -44,14 +44,21 @@ namespace HowrashokShop.Models
         {
             get
             {
-                var disc = Discounts.OrderByDescending(c => c.DateOfSetting).FirstOrDefault();
-                if (disc != null)
+                List<Discount> discounts = new();
+                List<Cost> costs = new();
+                using(HowrashokShopContext context = new())
                 {
-                    return Math.Round((Costs.OrderByDescending(c => c.DateOfSetting).ToList()[0].Size) * (100 - disc.Size) / 100,2).ToString();
+                    discounts = context.Discounts.Where(c => c.ProductId == Id).ToList();
+                    costs = context.Costs.Where(c => c.ProductId == Id).ToList();
+                }
+                var disc = discounts.OrderByDescending(c => c.DateOfSetting).FirstOrDefault();
+                if (disc != null && disc.DateOfSetting.AddDays(disc.During).Day >= DateTime.Now.Day)
+                {
+                    return Math.Round((costs.OrderByDescending(c => c.DateOfSetting).ToList()[0].Size) * (100 - disc.Size) / 100,2).ToString();
                 }
                 else
                 {
-                    return Math.Round(Costs.OrderByDescending(c => c.DateOfSetting).ToList()[0].Size, 2).ToString();
+                    return Math.Round(costs.OrderByDescending(c => c.DateOfSetting).ToList()[0].Size, 2).ToString();
                 }
             }
         }
